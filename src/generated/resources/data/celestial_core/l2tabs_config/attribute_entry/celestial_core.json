@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "id": "celestial_core:regen_rate",
+      "intrinsic": 0.0,
+      "order": 22000,
+      "usePercent": true
+    },
+    {
+      "id": "celestial_core:arrow_speed",
+      "intrinsic": 0.0,
+      "order": 22300,
+      "usePercent": true
+    },
+    {
+      "id": "celestial_core:arrow_knock",
+      "intrinsic": 0.0,
+      "order": 22500,
+      "usePercent": false
+    },
+    {
+      "id": "celestial_core:armor_penetration",
+      "intrinsic": 0.0,
+      "order": 22700,
+      "usePercent": true
+    },
+    {
+      "id": "celestial_core:toughness_penetration",
+      "intrinsic": 0.0,
+      "order": 22900,
+      "usePercent": true
+    }
+  ]
+}
