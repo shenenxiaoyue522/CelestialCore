@@ -78,6 +78,9 @@ public class CCRecipeGen {
                 .requires(CCItems.OCEAN_INGOT).requires(CCItems.GUARDIAN_SPIKE).requires(CCItems.GUARDIAN_SPIKE).requires(CCItems.GUARDIAN_SPIKE)
                 .requires(CCItems.GUARDIAN_SPIKE)
                 .save(pvd);
+        unlock(pvd, ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PINK_PETALS, 4)::unlockedBy, CCItems.SAKURA_FRAGMENT.get())
+                .requires(CCItems.SAKURA_FRAGMENT).requires(CCItems.SAKURA_FRAGMENT)
+                .save(pvd);
 
         genMetalStorage(pvd, CCItems.SAKURA_STEEL.get(), CCItems.SAKURA_STEEL_NUGGET.get(), CCItems.SAKURA_STEEL_BLOCK.asItem());
         genMetalStorage(pvd, CCItems.GUARDIAN_OCEAN_INGOT.get(), CCItems.GUARDIAN_OCEAN_NUGGET.get(), CCItems.GUARDIAN_OCEAN_BLOCK.asItem());
