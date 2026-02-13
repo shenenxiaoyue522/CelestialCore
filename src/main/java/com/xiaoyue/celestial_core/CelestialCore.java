@@ -49,6 +49,7 @@ public class CelestialCore {
 
     public CelestialCore() {
         CCItems.register();
+        CCBlocks.register();
         CCEffects.register();
         CCLootModifier.register();
         CCAttributes.register();

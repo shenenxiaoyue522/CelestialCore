@@ -5,6 +5,7 @@ import com.tterrag.registrate.util.DataIngredient;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.xiaoyue.celestial_core.CelestialCore;
 import com.xiaoyue.celestial_core.content.recipes.TransformationRecipeBuilder;
+import com.xiaoyue.celestial_core.register.CCBlocks;
 import com.xiaoyue.celestial_core.register.CCItems;
 import com.xiaoyue.celestial_core.register.CCMaterials;
 import com.xiaoyue.celestial_core.utils.ItemUtils;
@@ -82,9 +83,9 @@ public class CCRecipeGen {
                 .requires(CCItems.SAKURA_FRAGMENT).requires(CCItems.SAKURA_FRAGMENT)
                 .save(pvd);
 
-        genMetalStorage(pvd, CCItems.SAKURA_STEEL.get(), CCItems.SAKURA_STEEL_NUGGET.get(), CCItems.SAKURA_STEEL_BLOCK.asItem());
-        genMetalStorage(pvd, CCItems.GUARDIAN_OCEAN_INGOT.get(), CCItems.GUARDIAN_OCEAN_NUGGET.get(), CCItems.GUARDIAN_OCEAN_BLOCK.asItem());
-        genMetalStorage(pvd, CCItems.VIRTUAL_GOLD_INGOT.get(), CCItems.VIRTUAL_GOLD_NUGGET.get(), CCItems.VIRTUAL_GOLD_BLOCK.asItem());
+        genMetalStorage(pvd, CCItems.SAKURA_STEEL.get(), CCItems.SAKURA_STEEL_NUGGET.get(), CCBlocks.SAKURA_STEEL_BLOCK.asItem());
+        genMetalStorage(pvd, CCItems.GUARDIAN_OCEAN_INGOT.get(), CCItems.GUARDIAN_OCEAN_NUGGET.get(), CCBlocks.GUARDIAN_OCEAN_BLOCK.asItem());
+        genMetalStorage(pvd, CCItems.VIRTUAL_GOLD_INGOT.get(), CCItems.VIRTUAL_GOLD_NUGGET.get(), CCBlocks.VIRTUAL_GOLD_BLOCK.asItem());
 
         for (int i = 0; i < CCMaterials.values().length; i++) {
             CCMaterials mat = CCMaterials.values()[i];

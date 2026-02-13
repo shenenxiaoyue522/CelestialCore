@@ -64,7 +64,7 @@ public enum CCMaterials implements IMatVanillaType {
 
     final ItemLike[] INGOTS = {CCItems.GUARDIAN_OCEAN_INGOT, CCItems.SAKURA_STEEL, CCItems.VIRTUAL_GOLD_INGOT};
     final ItemLike[] NUGGETS = {CCItems.GUARDIAN_OCEAN_NUGGET, CCItems.SAKURA_STEEL_NUGGET, CCItems.VIRTUAL_GOLD_NUGGET};
-    final BlockEntry<?>[] BLOCKS = {CCItems.GUARDIAN_OCEAN_BLOCK, CCItems.SAKURA_STEEL_BLOCK, CCItems.VIRTUAL_GOLD_BLOCK};
+    final BlockEntry<?>[] BLOCKS = {CCBlocks.GUARDIAN_OCEAN_BLOCK, CCBlocks.SAKURA_STEEL_BLOCK, CCBlocks.VIRTUAL_GOLD_BLOCK};
 
     @Override
     public Item getIngot() {
