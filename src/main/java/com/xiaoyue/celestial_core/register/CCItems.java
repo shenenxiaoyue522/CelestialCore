@@ -1,6 +1,5 @@
 package com.xiaoyue.celestial_core.register;
 
-import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.xiaoyue.celestial_core.CelestialCore;
@@ -10,10 +9,8 @@ import com.xiaoyue.celestial_core.data.CCLangData;
 import com.xiaoyue.celestial_core.data.CCModConfig;
 import com.xiaoyue.celestial_core.utils.IRarityUtils;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 
 public class CCItems {
