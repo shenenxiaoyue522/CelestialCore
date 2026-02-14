@@ -1,4 +1,4 @@
-// 1.20.1	2026-02-13T14:12:16.2298054	Registrate Provider for celestial_core [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
+// 1.20.1	2026-02-14T13:26:31.2973645	Registrate Provider for celestial_core [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
 941447da70f99dd640043e3eab9d866d32a3dd83 assets/celestial_core/blockstates/guardian_ocean_block.json
 bf54a41af3f10b2efc158f6b2b934fd7f8bc5a7a assets/celestial_core/blockstates/sakura_steel_block.json
 f8145523e76e04d3259ae16718d09990eab9035b assets/celestial_core/blockstates/virtual_gold_block.json
@@ -168,10 +168,12 @@ b2b083ff09477456b582180fa1fe56523b50b59b data/l2damagetracker/tags/attribute/per
 106852f87070a64773c2fa129fe6d2cd435f00ed data/minecraft/advancements/recipes/misc/crying_obsidian.json
 0e9657b0bfdbe32174c9112186cef1066c1b7770 data/minecraft/advancements/recipes/misc/experience_bottle.json
 8eeacf8c7fc96803e4b1494a056e496b20afb755 data/minecraft/advancements/recipes/misc/name_tag.json
+1fc3dbeb6ac6bde46a269ab14036690ad508db68 data/minecraft/advancements/recipes/misc/pink_petals.json
 d7c270cd27871fee8a71fc73effb3b68f3c69a30 data/minecraft/advancements/recipes/misc/scute.json
 6086cc5daefb69423cf6c6984955a407513f3ada data/minecraft/recipes/crying_obsidian.json
 01ece3a2e1800c9ffcfa1ecab028f68dd43c6150 data/minecraft/recipes/experience_bottle.json
 283d573a8864f5c89588affeabbb2478f13ef383 data/minecraft/recipes/name_tag.json
+8c9c8842fc96abfc15fa16a52afae0b386da6217 data/minecraft/recipes/pink_petals.json
 ff8cd9a017d7e591552d9e37e8282d4c4120079a data/minecraft/recipes/scute.json
 d43f2fd4df16182f2ce1f08989e0c4d6e9f60817 data/minecraft/tags/items/axes.json
 1a6222e8d6fd551722a930af67d174b3d7af98a7 data/minecraft/tags/items/hoes.json

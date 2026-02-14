@@ -19,7 +19,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
@@ -66,10 +65,7 @@ public class CelestialCore {
 
     @SubscribeEvent
     public static void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ComposterBlock.COMPOSTABLES.put(CCItems.SAKURA_FRAGMENT, 0.4f);
-            CCEffects.registerBrewingRecipe();
-        });
+        event.enqueueWork(CCEffects::registerBrewingRecipe);
     }
 
     @SubscribeEvent
