@@ -1,6 +1,5 @@
-package com.xiaoyue.celestial_core.content.network;
+package com.xiaoyue.celestial_core.content.generic;
 
-import com.xiaoyue.celestial_core.content.generic.EntityIntData;
 import dev.xkmc.l2library.util.Proxy;
 import dev.xkmc.l2serial.network.SerialPacketBase;
 import dev.xkmc.l2serial.serialization.SerialClass;

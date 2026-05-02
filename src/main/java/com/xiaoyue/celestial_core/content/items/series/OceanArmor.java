@@ -1,4 +1,4 @@
-package com.xiaoyue.celestial_core.content.series;
+package com.xiaoyue.celestial_core.content.items.series;
 
 import com.xiaoyue.celestial_core.data.CCLangData;
 import com.xiaoyue.celestial_core.register.CCMaterials;
@@ -13,20 +13,19 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class VirtualGoldArmor extends ExtraArmorConfig {
+public class OceanArmor extends ExtraArmorConfig {
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
-        if (EntityUtils.getSeriesArmorAmount(player, CCMaterials.VIRTUAL_GOLD) == 4) {
-            EntityUtils.addEct(player, MobEffects.FIRE_RESISTANCE, 40);
+        if (EntityUtils.getSeriesArmorAmount(player, CCMaterials.GUARDIAN_OCEAN) == 4) {
+            EntityUtils.addEct(player, MobEffects.WATER_BREATHING, 40);
         }
         super.onArmorTick(stack, world, player);
     }
 
     @Override
     public void addTooltip(ItemStack stack, List<Component> list) {
-        list.add(CCLangData.VIRTUAL_GOLD_GENERAL.get().withStyle(ChatFormatting.GRAY));
-        list.add(CCLangData.FULL_SET.get(CCLangData.eff(MobEffects.FIRE_RESISTANCE)).withStyle(ChatFormatting.GRAY));
+        list.add(CCLangData.FULL_SET.get(CCLangData.eff(MobEffects.WATER_BREATHING)).withStyle(ChatFormatting.GRAY));
         super.addTooltip(stack, list);
     }
 

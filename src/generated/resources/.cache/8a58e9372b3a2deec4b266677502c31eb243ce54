@@ -1,9 +1,9 @@
-// 1.20.1	2026-02-14T13:26:31.2973645	Registrate Provider for celestial_core [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
+// 1.20.1	2026-03-31T23:34:05.864842	Registrate Provider for celestial_core [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes)]
 941447da70f99dd640043e3eab9d866d32a3dd83 assets/celestial_core/blockstates/guardian_ocean_block.json
 bf54a41af3f10b2efc158f6b2b934fd7f8bc5a7a assets/celestial_core/blockstates/sakura_steel_block.json
 f8145523e76e04d3259ae16718d09990eab9035b assets/celestial_core/blockstates/virtual_gold_block.json
-55b2a4981cc32ba72c06b0f251b09a24a0f4bb13 assets/celestial_core/lang/en_ud.json
-64ee5fd6d5d36aa099b3a414b2283fd05a8aef33 assets/celestial_core/lang/en_us.json
+4f931452b199527cab1887fe35aa241de83d247f assets/celestial_core/lang/en_ud.json
+2348a7784a87325c3f186e41d065fb7521874536 assets/celestial_core/lang/en_us.json
 670cfa1adb7876429d103f3772504197b96a1d6c assets/celestial_core/models/block/guardian_ocean_block.json
 3a27bc9717d310fa4e8cb91f16660f0564d3cc4d assets/celestial_core/models/block/sakura_steel_block.json
 e7fb3e48020017b0712255b3526dca7be0a20621 assets/celestial_core/models/block/virtual_gold_block.json

@@ -4,7 +4,7 @@ import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.xiaoyue.celestial_core.CelestialCore;
 import com.xiaoyue.celestial_core.content.items.VirtualGoldArmorItem;
-import com.xiaoyue.celestial_core.content.series.*;
+import com.xiaoyue.celestial_core.content.items.series.*;
 import dev.xkmc.l2damagetracker.contents.materials.api.*;
 import dev.xkmc.l2damagetracker.contents.materials.generic.ExtraArmorConfig;
 import dev.xkmc.l2damagetracker.contents.materials.generic.ExtraToolConfig;
