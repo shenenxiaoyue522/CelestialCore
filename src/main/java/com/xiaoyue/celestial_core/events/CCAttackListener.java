@@ -28,9 +28,10 @@ public class CCAttackListener implements AttackListener {
 
     private void attrOptional(LivingEntity entity, Attribute attr, LivingEntity attacker, Attribute penetration, UUID uuid, String name) {
         this.getAttr(entity, attr).ifPresent(ins -> {
-            double ap = attacker.getAttributeValue(penetration);
+            AttributeInstance ap = attacker.getAttribute(penetration);
+            if (ap == null) return;
             ins.removeModifier(uuid);
-            var modifier = new AttributeModifier(uuid, name, -ap, ItemUtils.getOperation(2));
+            var modifier = new AttributeModifier(uuid, name, -ap.getValue(), ItemUtils.getOperation(2));
             ins.addTransientModifier(modifier);
         });
     }
