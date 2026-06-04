@@ -1,0 +1,18 @@
+{
+  "type": "celestial_core:add_item",
+  "chance": "celestial_configs/celestial_core-server.toml/materials.midnightFragmentChance",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:stray"
+      }
+    },
+    {
+      "condition": "celestial_core:player_flag",
+      "flag": "celestial_core:nether_stage"
+    }
+  ],
+  "item": "celestial_core:midnight_fragment"
+}

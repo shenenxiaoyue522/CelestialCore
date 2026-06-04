@@ -1,0 +1,22 @@
+{
+  "values": {
+    "celestial_core:guardian_ocean": {
+      "full": false,
+      "set": [
+        "minecraft:mining_fatigue"
+      ]
+    },
+    "celestial_core:sakura": {
+      "full": false,
+      "set": [
+        "minecraft:poison"
+      ]
+    },
+    "celestial_core:virtual_gold": {
+      "full": false,
+      "set": [
+        "minecraft:wither"
+      ]
+    }
+  }
+}

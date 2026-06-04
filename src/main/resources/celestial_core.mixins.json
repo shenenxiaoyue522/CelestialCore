@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "com.xiaoyue.celestial_core.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "celestial_overhaul.refmap.json",
+  "mixins": [
+    "AbstractArrowInvoker",
+    "EntityMixin",
+    "ItemEntityMixin",
+    "ItemStackMixin",
+    "LivingEntityMixin"
+  ],
+  "minVersion": "0.8",
+  "client": [
+    "GameRenderMixin",
+    "ScreenEffectMixin"
+  ]
+}

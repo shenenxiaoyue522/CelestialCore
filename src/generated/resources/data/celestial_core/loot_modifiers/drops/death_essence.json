@@ -1,0 +1,22 @@
+{
+  "type": "celestial_core:add_item",
+  "chance": "celestial_configs/celestial_core-server.toml/materials.deathEssenceChance",
+  "conditions": [
+    {
+      "condition": "minecraft:damage_source_properties",
+      "predicate": {
+        "tags": [
+          {
+            "expected": true,
+            "id": "celestial_core:wither"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "celestial_core:entity_health",
+      "min": "celestial_configs/celestial_core-server.toml/materials.deathEssenceMinHealth"
+    }
+  ],
+  "item": "celestial_core:death_essence"
+}
