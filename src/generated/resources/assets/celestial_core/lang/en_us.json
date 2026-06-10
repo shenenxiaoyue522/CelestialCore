@@ -187,5 +187,5 @@
   "item.minecraft.tipped_arrow.effect.regen_rate": "Arrow of Regen Rate",
   "itemGroup.celestial_core.main": "Celestial Core Misc",
   "itemGroup.celestial_core.tools": "Celestial Core Tools",
-  "jei.transformation.title": "Transformation"
+  "jei.fluid_transformation.title": "Fluid Transformation"
 }

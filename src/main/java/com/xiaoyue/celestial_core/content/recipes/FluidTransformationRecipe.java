@@ -11,28 +11,23 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SerialClass
-public class TransformationRecipe extends BaseRecipe<TransformationRecipe, TransformationRecipe, TransformationRecipe.Inv> {
+public class FluidTransformationRecipe extends BaseRecipe<FluidTransformationRecipe, FluidTransformationRecipe, FluidTransformationRecipe.Inv> {
 
     @SerialField
     public List<Ingredient> inputs = new ArrayList<>();
 
     @SerialField
-    public Block stat;
+    public Block fluid;
 
     @SerialField
     public ItemStack output;
 
-    @SerialField
-    @Nullable
-    public Block after;
-
-    public TransformationRecipe() {
+    public FluidTransformationRecipe() {
         super(CCRecipes.RS_TRANSFORMATION.get());
     }
 

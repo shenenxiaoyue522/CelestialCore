@@ -1,15 +1,15 @@
 package com.xiaoyue.celestial_core.mixin;
 
-import com.xiaoyue.celestial_core.content.recipes.TransformationRecipe;
+import com.xiaoyue.celestial_core.content.recipes.FluidTransformationRecipe;
 import com.xiaoyue.celestial_core.register.CCRecipes;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,20 +30,14 @@ public abstract class ItemEntityMixin {
         ItemEntity entity = (ItemEntity) (Object) this;
         Level level = entity.level();
         if (entity.isRemoved() || level.isClientSide()) return;
-        TransformationRecipe.Inv inv = new TransformationRecipe.Inv();
+        FluidTransformationRecipe.Inv inv = new FluidTransformationRecipe.Inv();
         level.getRecipeManager().getRecipeFor(CCRecipes.RT_TRANSFORMATION.get(), inv, level).map(RecipeHolder::value).ifPresent(recipe -> {
-            List<BlockPos> states = List.of(entity.getOnPos(), entity.getOnPos().below());
-            BlockPos current = null;
-            if (level.getBlockState(states.get(0)).is(recipe.stat)) {
-                current = states.get(0);
-            } else if (level.getBlockState(states.get(1)).is(recipe.stat)) {
-                current = states.get(1);
-            }
-            if (current == null) return;
-            List<ItemEntity> itemEntities = level.getEntitiesOfClass(ItemEntity.class, entity.getBoundingBox().inflate(1));
+            BlockState state = level.getBlockState(entity.getOnPos());
+            if (state.getFluidState() == null || !state.is(recipe.fluid)) return;
+            List<ItemEntity> mates = level.getEntitiesOfClass(ItemEntity.class, entity.getBoundingBox().inflate(1));
             List<Ingredient> missInputs = new ArrayList<>(recipe.inputs);
             Set<ItemEntity> selectedEntities = new ReferenceOpenHashSet<>(missInputs.size());
-            for (ItemEntity itemEntity : itemEntities) {
+            for (ItemEntity itemEntity : mates) {
                 ItemStack other = itemEntity.getItem();
                 if (other.isEmpty()) continue;
                 for (var it = missInputs.iterator(); it.hasNext(); ) {
@@ -65,9 +59,6 @@ public abstract class ItemEntityMixin {
                 }
                 ItemStack output = recipe.assemble(inv, level.registryAccess());
                 EntityUtils.spawnItem(level, entity.getOnPos(), output);
-                if (recipe.after != null) {
-                    level.setBlock(current, recipe.after.defaultBlockState(), 2);
-                }
             }
         });
     }

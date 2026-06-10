@@ -139,7 +139,7 @@
   "block.celestial_core.sakura_steel_block": "樱花钢块",
   "block.celestial_core.virtual_gold_block": "虚金块",
   "item.celestial_core.sakura_steel_nugget": "樱花钢粒",
-  "jei.transformation.title": "转化",
+  "jei.fluid_transformation.title": "流体转化",
   "celestial_core.configuration.brokenTotemChance": "破损图腾概率",
   "celestial_core.configuration.brokenTotemChance.tooltip": " 默认: 0.5\n 范围: 0.0 ~ 1.0",
   "celestial_core.configuration.deathEssenceChance": "死亡精华概率",

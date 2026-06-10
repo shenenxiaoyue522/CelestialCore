@@ -1,7 +1,7 @@
 package com.xiaoyue.celestial_core.compat;
 
 import com.xiaoyue.celestial_core.CelestialCore;
-import com.xiaoyue.celestial_core.content.recipes.TransformationRecipe;
+import com.xiaoyue.celestial_core.content.recipes.FluidTransformationRecipe;
 import com.xiaoyue.celestial_core.register.CCRecipes;
 import dev.xkmc.l2core.util.Proxy;
 import mezz.jei.api.IModPlugin;
@@ -18,7 +18,7 @@ public class CCJeiPlugin implements IModPlugin {
 
     public static final ResourceLocation ID = CelestialCore.loc("main");
     public static final ResourceLocation TEXTURE = CelestialCore.loc("textures/gui/jei.png");
-    public final TransformationRecipeCategory TRANSFORMATION = new TransformationRecipeCategory();
+    public final FluidTransformationRecipeCategory FLUID_TRANSFORMATION = new FluidTransformationRecipeCategory();
 
     @Override
     public ResourceLocation getPluginUid() {
@@ -27,14 +27,14 @@ public class CCJeiPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        registration.addRecipeCategories(TRANSFORMATION.init(registration.getJeiHelpers()));
+        registration.addRecipeCategories(FLUID_TRANSFORMATION.init(registration.getJeiHelpers()));
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         var level = Proxy.getLevel();
         assert level != null;
-        List<RecipeHolder<TransformationRecipe>> list = level.getRecipeManager().getAllRecipesFor(CCRecipes.RT_TRANSFORMATION.get());
-        registration.addRecipes(TRANSFORMATION.getRecipeType(), list.stream().map(RecipeHolder::value).toList());
+        List<RecipeHolder<FluidTransformationRecipe>> list = level.getRecipeManager().getAllRecipesFor(CCRecipes.RT_TRANSFORMATION.get());
+        registration.addRecipes(FLUID_TRANSFORMATION.getRecipeType(), list.stream().map(RecipeHolder::value).toList());
     }
 }

@@ -3,7 +3,7 @@ package com.xiaoyue.celestial_core.data;
 import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.xiaoyue.celestial_core.CelestialCore;
-import com.xiaoyue.celestial_core.content.recipes.TransformationRecipeBuilder;
+import com.xiaoyue.celestial_core.content.recipes.FluidTransformationRecipeBuilder;
 import com.xiaoyue.celestial_core.register.CCItems;
 import com.xiaoyue.celestial_core.register.CCMaterials;
 import com.xiaoyue.celestial_core.utils.ItemUtils;
@@ -30,7 +30,7 @@ public class CCRecipeGen {
     public static String currentFolder = "";
 
     public static void onRecipeGen(RegistrateRecipeProvider pvd) {
-        unlock(pvd, new TransformationRecipeBuilder(List.of(Ingredient.of(Items.DIAMOND), Ingredient.of(CCItems.OCEAN_ESSENCE)), Blocks.WATER,
+        unlock(pvd, new FluidTransformationRecipeBuilder(List.of(Ingredient.of(Items.DIAMOND), Ingredient.of(CCItems.OCEAN_ESSENCE)), Blocks.WATER,
                 Items.HEART_OF_THE_SEA.getDefaultInstance())::unlockedBy, Items.DIAMOND).save(pvd, getID(Items.HEART_OF_THE_SEA));
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CCItems.EARTH_CORE, 1)::unlockedBy, Items.CRYING_OBSIDIAN)
