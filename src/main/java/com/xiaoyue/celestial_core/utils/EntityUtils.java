@@ -88,26 +88,28 @@ public class EntityUtils {
         return false;
     }
 
-    public static void startAddBlackFlame(LivingEntity entity, int time) {
-        setBlackFlameTime(entity, time);
-        EntityTagData.syncData(entity, CelestialFlags.BLACK_FLAME, time);
-        DelayHelper.schedule(ResourceLocation.parse(CelestialFlags.BLACK_FLAME), time, () -> clearBlackFlame(entity));
+    public static void addAbyssalFlame(LivingEntity entity, int time, boolean sync) {
+        setAbyssalFlameTime(entity, time, sync);
+        DelayHelper.schedule(ResourceLocation.parse(CelestialFlags.ABYSSAL_FLAME + "_e_" + entity.getId()), time, () -> clearAbyssalFlame(entity));
     }
 
-    public static boolean onBlackFlame(LivingEntity entity) {
-        return EntityTagData.getData(entity, CelestialFlags.BLACK_FLAME) > 0;
+    public static boolean onAbyssalFlame(LivingEntity entity) {
+        return EntityTagData.getData(entity, CelestialFlags.ABYSSAL_FLAME) > 0;
     }
 
-    public static int getBlackFlameTime(LivingEntity entity) {
-        return EntityTagData.getData(entity, CelestialFlags.BLACK_FLAME);
+    public static int getAbyssalFlameTime(LivingEntity entity) {
+        return EntityTagData.getData(entity, CelestialFlags.ABYSSAL_FLAME);
     }
 
-    public static void setBlackFlameTime(LivingEntity entity, int time) {
-        EntityTagData.addData(entity, CelestialFlags.BLACK_FLAME, time);
+    public static void setAbyssalFlameTime(LivingEntity entity, int time, boolean sync) {
+        EntityTagData.addData(entity, CelestialFlags.ABYSSAL_FLAME, time);
+        if (sync) {
+            EntityTagData.syncData(entity, CelestialFlags.ABYSSAL_FLAME, time);
+        }
     }
 
-    public static void clearBlackFlame(LivingEntity entity) {
-        EntityTagData.removeData(entity, CelestialFlags.BLACK_FLAME);
+    public static void clearAbyssalFlame(LivingEntity entity) {
+        setAbyssalFlameTime(entity, 0, true);
     }
 
     public static <I extends Item> int getSeriesArmorAmount(LivingEntity entity, I item) {

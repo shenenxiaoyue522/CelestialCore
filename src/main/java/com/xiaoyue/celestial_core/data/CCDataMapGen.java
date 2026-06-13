@@ -23,11 +23,10 @@ public class CCDataMapGen {
 
     public static void onDataMapGen(RegistrateDataMapProvider pvd) {
         DataMapProvider.Builder<AttrDispEntry, Attribute> attr = pvd.builder(L2Tabs.ATTRIBUTE_ENTRY.reg());
-        DTAttributeConfigGen.add(attr, CCAttributes.REGEN_RATE.key(), true, 25100);
-        DTAttributeConfigGen.add(attr, CCAttributes.ARROW_SPEED.key(), true, 25200);
-        DTAttributeConfigGen.add(attr, CCAttributes.ARROW_KNOCK.key(), false, 25300);
-        DTAttributeConfigGen.add(attr, CCAttributes.ARMOR_PENETRATION.key(), true, 25400);
-        DTAttributeConfigGen.add(attr, CCAttributes.TOUGHNESS_PENETRATION.key(), true, 25500);
+        DTAttributeConfigGen.add(attr, CCAttributes.ARROW_SPEED.key(), true, 25100);
+        DTAttributeConfigGen.add(attr, CCAttributes.ARROW_KNOCK.key(), false, 25200);
+        DTAttributeConfigGen.add(attr, CCAttributes.ARMOR_PENETRATION.key(), true, 25300);
+        DTAttributeConfigGen.add(attr, CCAttributes.TOUGHNESS_PENETRATION.key(), true, 25400);
 
         DataMapProvider.Builder<ArmorImmunity, ArmorMaterial> armor = pvd.builder(L2DamageTracker.ARMOR.reg());
         armor.add(CCMaterials.GUARDIAN_OCEAN.getArmorMaterial(), ArmorImmunity.of(false, MobEffects.DIG_SLOWDOWN.value()), false);

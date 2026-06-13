@@ -9,8 +9,6 @@ import net.minecraft.world.entity.ai.attributes.RangedAttribute;
 
 public class CCAttributes {
 
-    public static final SimpleEntry<Attribute> REGEN_RATE = L2DamageTracker.reg(CelestialCore.REGISTRATE,
-            "regen_rate", s -> new FactorAttribute(s, 0f, 0f, 64f), "Regeneration Rate");
     public static final SimpleEntry<Attribute> ARROW_SPEED = L2DamageTracker.reg(CelestialCore.REGISTRATE,
             "arrow_speed", s -> new FactorAttribute(s, 0f, 0f, 1000f), "Arrow Speed");
     public static final SimpleEntry<Attribute> ARROW_KNOCK = L2DamageTracker.reg(CelestialCore.REGISTRATE,

@@ -19,8 +19,8 @@ public abstract class ScreenEffectMixin {
     private static void celestial_core$renderFireScreen(Minecraft pMinecraft, PoseStack pPoseStack, CallbackInfo ci) {
         if (pMinecraft.player != null) {
             NeoForge.EVENT_BUS.post(new RenderScreenEffectEvent(pPoseStack));
-            if (EntityUtils.onBlackFlame(pMinecraft.player)) {
-                FlameScreens.renderFlameScreen(FlameScreens.BLACK_FIRE_LAYER_2, pPoseStack);
+            if (EntityUtils.onAbyssalFlame(pMinecraft.player)) {
+                FlameScreens.renderFlameScreen(FlameScreens.BLACK_FIRE_LAYER_1, pPoseStack);
             }
         }
     }

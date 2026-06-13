@@ -23,9 +23,6 @@ public class CCEffects {
     public static final SimpleEntry<MobEffect> ARROW_DAMAGE = genEffect("arrow_damage",
             () -> new AttributeEffect(0, 0xffd18920, L2DamageTracker.BOW_STRENGTH.holder(),
                     CelestialCore.loc("arrow_damage"), 0.2f, AttributeModifier.Operation.ADD_VALUE), "Increase arrow damage");
-    public static final SimpleEntry<MobEffect> REGEN_RATE = genEffect("regen_rate",
-            () -> new AttributeEffect(0, 0xffd1209d, CCAttributes.REGEN_RATE.holder(),
-                    CelestialCore.loc("regen_rate"), 0.2f, AttributeModifier.Operation.ADD_VALUE), "Increase regeneration rate");
 
     public static final SimpleEntry<MobEffect> VIOLENT = genEffect("violent",
             () -> new CelestialEffect(MobEffectCategory.NEUTRAL, 0xff841d1d), "Melee damage bypass armor");
@@ -50,7 +47,6 @@ public class CCEffects {
     static {
         POTION.regPotion2("crit_rate", CRIT_RATE.holder(), CCItems.OCEAN_ESSENCE::get, 6000, 9600);
         POTION.regPotion2("crit_damage", CRIT_DAMAGE.holder(), CCItems.FIRE_ESSENCE::get, 6000, 9600);
-        POTION.regPotion2("regen_rate", REGEN_RATE.holder(), CCItems.HEART_FRAGMENT::get, 6000, 9600);
         POTION.regPotion2("arrow_damage", ARROW_DAMAGE.holder(), CCItems.LIGHT_FRAGMENT::get, 6000, 9600);
     }
 

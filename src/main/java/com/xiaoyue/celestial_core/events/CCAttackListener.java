@@ -52,9 +52,6 @@ public class CCAttackListener implements AttackListener {
         if (attacker == null) {
             return false;
         }
-        if (attacker.getMainHandItem().is(Items.DIAMOND)) {
-            EntityUtils.startAddBlackFlame(target, 100);
-        }
         this.attrOptional(target, Attributes.ARMOR, attacker, CCAttributes.ARMOR_PENETRATION.holder(), CCUtils.BYPASS_ARMOR_NAME);
         this.attrOptional(target, Attributes.ARMOR_TOUGHNESS, attacker, CCAttributes.TOUGHNESS_PENETRATION.holder(), CCUtils.BYPASS_TOUGHNESS_NAME);
         return false;

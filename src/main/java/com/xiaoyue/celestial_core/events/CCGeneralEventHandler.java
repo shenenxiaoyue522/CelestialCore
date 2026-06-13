@@ -21,7 +21,6 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.EntityTeleportEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
-import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
 import net.neoforged.neoforge.event.entity.living.LivingUseTotemEvent;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
@@ -54,21 +53,10 @@ public class CCGeneralEventHandler {
     public static void onLivingTick(EntityTickEvent.Post event) {
         Entity e = event.getEntity();
         if (e instanceof LivingEntity entity) {
-            if (entity.level().isClientSide() || entity.tickCount % 10 != 0) return;
-            if (EntityUtils.onBlackFlame(entity)) {
-                int time = EntityUtils.getBlackFlameTime(entity);
-                EntityUtils.setBlackFlameTime(entity, Math.max(0, time - 1));
+            if (entity.level().isClientSide() || entity.tickCount % 20 != 0) return;
+            if (EntityUtils.onAbyssalFlame(entity)) {
                 entity.hurt(CCDamageTypes.abyss(entity.level()), entity.getMaxHealth() * 0.01f);
             }
-        }
-    }
-
-    @SubscribeEvent
-    public static void onLivingHeal(LivingHealEvent event) {
-        Entity entity = event.getEntity();
-        if (entity instanceof Player player) {
-            double re = player.getAttributeValue(CCAttributes.REGEN_RATE.holder());
-            event.setAmount((float) (event.getAmount() * re));
         }
     }
 

@@ -31,12 +31,13 @@ public class CCDamageTypes extends DamageTypeAndTagsGen {
         new DamageTypeHolder(MAGIC, new DamageType("magic", DamageScaling.NEVER, 0.1f))
                 .add(BYPASSES_ARMOR, BYPASSES_COOLDOWN, AVOIDS_GUARDIAN_THORNS, Tags.DamageTypes.IS_MAGIC, L2DamageTypes.NO_SCALE);
         new DamageTypeHolder(ABYSSAL_MAGIC, new DamageType("magic", DamageScaling.NEVER, 0.1f))
-                .add(BYPASSES_ARMOR, BYPASSES_COOLDOWN, AVOIDS_GUARDIAN_THORNS, Tags.DamageTypes.IS_MAGIC, L2DamageTypes.NO_SCALE)
+                .add(BYPASSES_ARMOR, BYPASSES_COOLDOWN, AVOIDS_GUARDIAN_THORNS, Tags.DamageTypes.IS_MAGIC, L2DamageTypes.NO_SCALE, NO_KNOCKBACK)
                 .add(L2DamageTypes.BYPASS_MAGIC);
     }
 
     @Override
     protected void addDamageTypeTags(RegistrateTagsProvider.Impl<DamageType> pvd) {
+        super.addDamageTypeTags(pvd);
         pvd.addTag(WITHER).add(DamageTypes.WITHER, DamageTypes.WITHER_SKULL);
     }
 

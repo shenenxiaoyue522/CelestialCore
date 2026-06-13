@@ -22,44 +22,44 @@ import org.joml.Matrix4f;
 @OnlyIn(Dist.CLIENT)
 public class FlameScreens {
 
-    public static final Material BLACK_FIRE_LAYER_1 = fireLayerOf(CelestialCore.loc("block/black_fire_layer_1"));
-    public static final Material BLACK_FIRE_LAYER_2 = fireLayerOf(CelestialCore.loc("block/black_fire_layer_2"));
+    public static final Material ABYSS_FIRE_LAYER_0 = fireLayerOf(CelestialCore.loc("block/abyssal_fire_layer_0"));
+    public static final Material BLACK_FIRE_LAYER_1 = fireLayerOf(CelestialCore.loc("block/abyssal_fire_layer_1"));
 
     public static Material fireLayerOf(ResourceLocation loc) {
         return new Material(InventoryMenu.BLOCK_ATLAS, loc);
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static void renderFlameScreen(Material fireLayer2, PoseStack pPoseStack) {
-        BufferBuilder bufferbuilder = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
+    public static void renderFlameScreen(Material fireLayer1, PoseStack poseStack) {
         RenderSystem.setShader(GameRenderer::getPositionTexColorShader);
         RenderSystem.depthFunc(519);
         RenderSystem.depthMask(false);
         RenderSystem.enableBlend();
-        TextureAtlasSprite textureatlassprite = fireLayer2.sprite();
+        TextureAtlasSprite textureatlassprite = fireLayer1.sprite();
         RenderSystem.setShaderTexture(0, textureatlassprite.atlasLocation());
-        float f = textureatlassprite.getU0();
-        float f1 = textureatlassprite.getU1();
-        float f2 = (f + f1) / 2.0F;
-        float f3 = textureatlassprite.getV0();
-        float f4 = textureatlassprite.getV1();
-        float f5 = (f3 + f4) / 2.0F;
-        float f6 = textureatlassprite.uvShrinkRatio();
-        float f7 = Mth.lerp(f6, f, f2);
-        float f8 = Mth.lerp(f6, f1, f2);
-        float f9 = Mth.lerp(f6, f3, f5);
-        float f10 = Mth.lerp(f6, f4, f5);
-        for (int i = 0; i < 2; ++i) {
-            pPoseStack.pushPose();
-            pPoseStack.translate((float) (-(i * 2 - 1)) * 0.24F, -0.3F, 0.0F);
-            pPoseStack.mulPose(Axis.YP.rotationDegrees((float) (i * 2 - 1) * 10.0F));
-            Matrix4f matrix4f = pPoseStack.last().pose();
-            bufferbuilder.addVertex(matrix4f, -0.5F, -0.5F, -0.5F).setColor(1.0F, 1.0F, 1.0F, 0.9F).setUv(f8, f10);
-            bufferbuilder.addVertex(matrix4f, 0.5F, -0.5F, -0.5F).setColor(1.0F, 1.0F, 1.0F, 0.9F).setUv(f7, f10);
-            bufferbuilder.addVertex(matrix4f, 0.5F, 0.5F, -0.5F).setColor(1.0F, 1.0F, 1.0F, 0.9F).setUv(f7, f9);
-            bufferbuilder.addVertex(matrix4f, -0.5F, 0.5F, -0.5F).setColor(1.0F, 1.0F, 1.0F, 0.9F).setUv(f8, f9);
-            BufferUploader.drawWithShader(bufferbuilder.build());
-            pPoseStack.popPose();
+        float u0 = textureatlassprite.getU0();
+        float u1 = textureatlassprite.getU1();
+        float f2 = (u0 + u1) / 2.0F;
+        float v0 = textureatlassprite.getV0();
+        float v1 = textureatlassprite.getV1();
+        float f5 = (v0 + v1) / 2.0F;
+        float ratio = textureatlassprite.uvShrinkRatio();
+        float f7 = Mth.lerp(ratio, u0, f2);
+        float f8 = Mth.lerp(ratio, u1, f2);
+        float f9 = Mth.lerp(ratio, v0, f5);
+        float f10 = Mth.lerp(ratio, v1, f5);
+        for(int i = 0; i < 2; ++i) {
+            poseStack.pushPose();
+            poseStack.translate((float)(-(i * 2 - 1)) * 0.24F, -0.3F, 0.0F);
+            poseStack.mulPose(Axis.YP.rotationDegrees((float)(i * 2 - 1) * 10.0F));
+            Matrix4f matrix4f = poseStack.last().pose();
+            BufferBuilder bufferbuilder = Tesselator.getInstance().begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR);
+            bufferbuilder.addVertex(matrix4f, -0.5F, -0.5F, -0.5F).setUv(f8, f10).setColor(1.0F, 1.0F, 1.0F, 0.9F);
+            bufferbuilder.addVertex(matrix4f, 0.5F, -0.5F, -0.5F).setUv(f7, f10).setColor(1.0F, 1.0F, 1.0F, 0.9F);
+            bufferbuilder.addVertex(matrix4f, 0.5F, 0.5F, -0.5F).setUv(f7, f9).setColor(1.0F, 1.0F, 1.0F, 0.9F);
+            bufferbuilder.addVertex(matrix4f, -0.5F, 0.5F, -0.5F).setUv(f8, f9).setColor(1.0F, 1.0F, 1.0F, 0.9F);
+            BufferUploader.drawWithShader(bufferbuilder.buildOrThrow());
+            poseStack.popPose();
         }
         RenderSystem.disableBlend();
         RenderSystem.depthMask(true);
@@ -67,9 +67,9 @@ public class FlameScreens {
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static void renderEntityFlame(Material fireLayer1, Material fireLayer2, PoseStack pMatrixStack, MultiBufferSource pBuffer, Entity pEntity) {
+    public static void renderEntityFlame(Material fireLayer0, Material fireLayer1, PoseStack pMatrixStack, MultiBufferSource pBuffer, Entity pEntity) {
+        TextureAtlasSprite fire_0 = fireLayer0.sprite();
         TextureAtlasSprite fire_1 = fireLayer1.sprite();
-        TextureAtlasSprite fire_2 = fireLayer2.sprite();
         Camera camera = Minecraft.getInstance().getEntityRenderDispatcher().camera;
         pMatrixStack.pushPose();
         float f = pEntity.getBbWidth() * 1.4F;
@@ -83,7 +83,7 @@ public class FlameScreens {
         int i = 0;
         VertexConsumer consumer = pBuffer.getBuffer(Sheets.cutoutBlockSheet());
         for (PoseStack.Pose pose = pMatrixStack.last(); f3 > 0.0F; ++i) {
-            TextureAtlasSprite fire_3 = i % 2 == 0 ? fire_1 : fire_2;
+            TextureAtlasSprite fire_3 = i % 2 == 0 ? fire_0 : fire_1;
             float f6 = fire_3.getU0();
             float f7 = fire_3.getV0();
             float f8 = fire_3.getU1();
@@ -105,8 +105,7 @@ public class FlameScreens {
         pMatrixStack.popPose();
     }
 
-    public static void fireVertex(PoseStack.Pose pMatrixEntry, VertexConsumer pBuffer, float pX, float pY, float pZ, float pTexU, float pTexV) {
-        pBuffer.addVertex(pMatrixEntry.pose(), pX, pY, pZ).setColor(255, 255, 255, 255).setUv(pTexU, pTexV)
-                .setUv2(0, 10).setOverlay(240).setNormal(pMatrixEntry, 0.0F, 1.0F, 0.0F);
+    private static void fireVertex(PoseStack.Pose matrixEntry, VertexConsumer buffer, float x, float y, float z, float texU, float texV) {
+        buffer.addVertex(matrixEntry, x, y, z).setColor(-1).setUv(texU, texV).setUv1(0, 10).setLight(240).setNormal(matrixEntry, 0.0F, 1.0F, 0.0F);
     }
 }

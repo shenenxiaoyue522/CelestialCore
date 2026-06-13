@@ -59,7 +59,6 @@ public class CelestialCore {
 
     @SubscribeEvent
     public static void modifyAttribute(EntityAttributeModificationEvent event) {
-        event.add(EntityType.PLAYER, CCAttributes.REGEN_RATE.holder(), 1);
         event.add(EntityType.PLAYER, CCAttributes.ARROW_SPEED.holder(), 1);
         event.add(EntityType.PLAYER, CCAttributes.ARROW_KNOCK.holder(), 0);
         event.add(EntityType.PLAYER, CCAttributes.ARMOR_PENETRATION.holder(), 0);

@@ -16,10 +16,10 @@ public class ClientEvents {
     @SubscribeEvent
     public static void renderLiving(RenderLivingEvent.Post<?, ?> event) {
         LivingEntity entity = event.getEntity();
-        if (EntityUtils.onBlackFlame(entity)) {
+        if (EntityUtils.onAbyssalFlame(entity)) {
             var buffer = event.getMultiBufferSource();
             var matrixStack = event.getPoseStack();
-            FlameScreens.renderEntityFlame(FlameScreens.BLACK_FIRE_LAYER_1, FlameScreens.BLACK_FIRE_LAYER_2, matrixStack, buffer, entity);
+            FlameScreens.renderEntityFlame(FlameScreens.ABYSS_FIRE_LAYER_0, FlameScreens.BLACK_FIRE_LAYER_1, matrixStack, buffer, entity);
         }
     }
 }

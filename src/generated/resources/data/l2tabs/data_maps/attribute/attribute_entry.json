@@ -2,27 +2,22 @@
   "values": {
     "celestial_core:armor_penetration": {
       "intrinsic": 0.0,
-      "order": 25400,
+      "order": 25300,
       "usePercent": true
     },
     "celestial_core:arrow_knock": {
       "intrinsic": 0.0,
-      "order": 25300,
+      "order": 25200,
       "usePercent": false
     },
     "celestial_core:arrow_speed": {
-      "intrinsic": 0.0,
-      "order": 25200,
-      "usePercent": true
-    },
-    "celestial_core:regen_rate": {
       "intrinsic": 0.0,
       "order": 25100,
       "usePercent": true
     },
     "celestial_core:toughness_penetration": {
       "intrinsic": 0.0,
-      "order": 25500,
+      "order": 25400,
       "usePercent": true
     }
   }

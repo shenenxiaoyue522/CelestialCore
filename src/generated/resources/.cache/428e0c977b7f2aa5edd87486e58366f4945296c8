@@ -1,9 +1,9 @@
-// 1.21.1	2026-06-10T23:26:13.3887143	Registrate Provider for celestial_core [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
+// 1.21.1	2026-06-13T22:37:07.0609216	Registrate Provider for celestial_core [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
 941447da70f99dd640043e3eab9d866d32a3dd83 assets/celestial_core/blockstates/guardian_ocean_block.json
 bf54a41af3f10b2efc158f6b2b934fd7f8bc5a7a assets/celestial_core/blockstates/sakura_steel_block.json
 f8145523e76e04d3259ae16718d09990eab9035b assets/celestial_core/blockstates/virtual_gold_block.json
-54089a48fcd52700aa63ad0c0cd5812bc492878c assets/celestial_core/lang/en_ud.json
-6b2b13412fe3c01c423e230e890593560d5531c2 assets/celestial_core/lang/en_us.json
+21e0c025e0339cfb5d666d93a3c4021f6514b30a assets/celestial_core/lang/en_ud.json
+9327ed1bb46d5f957e0115ef56f5903c2e3ec593 assets/celestial_core/lang/en_us.json
 670cfa1adb7876429d103f3772504197b96a1d6c assets/celestial_core/models/block/guardian_ocean_block.json
 3a27bc9717d310fa4e8cb91f16660f0564d3cc4d assets/celestial_core/models/block/sakura_steel_block.json
 e7fb3e48020017b0712255b3526dca7be0a20621 assets/celestial_core/models/block/virtual_gold_block.json
@@ -183,7 +183,8 @@ dafecec0951b3dabbc5cae1c84a50afceae3e843 data/celestial_core/recipe/totem_of_und
 2d750333e0b40a04440f3bf3d6b2e3f4b8853199 data/celestial_core/recipe/virtual_gold_ingotfrom_nugget.json
 cd007431ce060f73a9df05d9977f345ad7ba77c6 data/celestial_core/tags/damage_type/wither.json
 86c113e0af346e8e9bb092abfdd40d4be329c04e data/l2damagetracker/data_maps/armor_material/armor_immunity.json
-bc745d6c7c40136e623cbaa83b51fc739e8d6238 data/l2tabs/data_maps/attribute/attribute_entry.json
+ab7f3063669ede23408290bee27b6dd14b50f9a2 data/l2damagetracker/tags/damage_type/ignore_scaling.json
+4d19064bf6d680d5f3a589f54e3a61a4542ea2af data/l2tabs/data_maps/attribute/attribute_entry.json
 03ba7d6f1ddefca01a42e64e47709003ecdf23d1 data/minecraft/advancement/recipes/misc/crying_obsidian.json
 846f353a1d28bf6455e3305646bd6d58343cd2be data/minecraft/advancement/recipes/misc/experience_bottle.json
 f5bc5987c9922c1bf6817f78826f570a9e09221e data/minecraft/advancement/recipes/misc/name_tag.json
@@ -194,6 +195,13 @@ c6f8e459dd8906a692f3930d8e00fbbe3d2b4a38 data/minecraft/recipe/experience_bottle
 2e05e0743d2ec7c7e43a2f249ae70b3894e8fd31 data/minecraft/recipe/name_tag.json
 c34a3ccbd6bc971f6c52fb13eed3497704b67be4 data/minecraft/recipe/pink_petals.json
 1711a93612e0fa25aba39098931f1c145f502d9b data/minecraft/recipe/turtle_scute.json
+ab7f3063669ede23408290bee27b6dd14b50f9a2 data/minecraft/tags/damage_type/avoids_guardian_thorns.json
+ab7f3063669ede23408290bee27b6dd14b50f9a2 data/minecraft/tags/damage_type/bypasses_armor.json
+ab7f3063669ede23408290bee27b6dd14b50f9a2 data/minecraft/tags/damage_type/bypasses_cooldown.json
+2265bd6e36d883a5da9c5f7cbdb98badba9fc483 data/minecraft/tags/damage_type/bypasses_effects.json
+2265bd6e36d883a5da9c5f7cbdb98badba9fc483 data/minecraft/tags/damage_type/bypasses_enchantments.json
+2265bd6e36d883a5da9c5f7cbdb98badba9fc483 data/minecraft/tags/damage_type/bypasses_resistance.json
+2265bd6e36d883a5da9c5f7cbdb98badba9fc483 data/minecraft/tags/damage_type/no_knockback.json
 d43f2fd4df16182f2ce1f08989e0c4d6e9f60817 data/minecraft/tags/item/axes.json
 d5a1fbdfe1eed7d807b33f35957ce40a83d139f2 data/minecraft/tags/item/chest_armor.json
 51b49103cdf6ae1e4167e754349439c00b4ed088 data/minecraft/tags/item/foot_armor.json
@@ -205,3 +213,4 @@ dcc23113733634c8bdeaaf49e06bb5e0b21c5546 data/minecraft/tags/item/pickaxes.json
 82c32e6c48bdfd1924be0a51c8c0d97742b0ad2e data/minecraft/tags/item/swords.json
 bc5ed901b7e2f2c88e257bfed5d36024543da2d6 data/minecraft/tags/item/trimmable_armor.json
 41ce061b1396a28141c8b28e141ac90d48df425d data/neoforge/loot_modifiers/global_loot_modifiers.json
+ab7f3063669ede23408290bee27b6dd14b50f9a2 data/neoforge/tags/damage_type/is_magic.json
