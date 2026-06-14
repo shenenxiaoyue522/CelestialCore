@@ -21,7 +21,7 @@ public class VirtualGoldArmor extends ExtraArmorConfig {
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
         if (Bindings.isArmorSlotIndex(slot) && entity instanceof LivingEntity player) {
-            if (EntityUtils.getSeriesArmorAmount(player, CCMaterials.VIRTUAL_GOLD) == 4) {
+            if (EntityUtils.getSetArmorAmount(player, CCMaterials.VIRTUAL_GOLD) == 4) {
                 EntityUtils.addEct(player, MobEffects.FIRE_RESISTANCE, 40);
             }
         }

@@ -21,7 +21,7 @@ public class OceanArmor extends ExtraArmorConfig {
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
         if (Bindings.isArmorSlotIndex(slot) && entity instanceof Player player) {
-            if (EntityUtils.getSeriesArmorAmount(player, CCMaterials.GUARDIAN_OCEAN) == 4) {
+            if (EntityUtils.getSetArmorAmount(player, CCMaterials.GUARDIAN_OCEAN) == 4) {
                 EntityUtils.addEct(player, MobEffects.WATER_BREATHING, 40);
             }
         }

@@ -112,7 +112,7 @@ public class EntityUtils {
         setAbyssalFlameTime(entity, 0, true);
     }
 
-    public static <I extends Item> int getSeriesArmorAmount(LivingEntity entity, I item) {
+    public static <I extends Item> int getSetArmorAmount(LivingEntity entity, I item) {
         int amount = 0;
         for (ItemStack armor : entity.getArmorSlots()) {
             if (armor.is(item)) amount++;
@@ -120,7 +120,7 @@ public class EntityUtils {
         return amount;
     }
 
-    public static int getSeriesArmorAmount(LivingEntity entity, Item... items) {
+    public static int getSetArmorAmount(LivingEntity entity, Item... items) {
         int amount = 0;
         for (ItemStack armor : entity.getArmorSlots()) {
             amount += (int) Arrays.stream(items).filter(armor::is).count();
@@ -128,8 +128,8 @@ public class EntityUtils {
         return amount;
     }
 
-    public static int getSeriesArmorAmount(LivingEntity entity, IMatVanillaType type) {
-        return getSeriesArmorAmount(entity, type.getArmor(EquipmentSlot.HEAD), type.getArmor(EquipmentSlot.CHEST),
+    public static int getSetArmorAmount(LivingEntity entity, IMatVanillaType type) {
+        return getSetArmorAmount(entity, type.getArmor(EquipmentSlot.HEAD), type.getArmor(EquipmentSlot.CHEST),
                 type.getArmor(EquipmentSlot.LEGS), type.getArmor(EquipmentSlot.FEET));
     }
 
