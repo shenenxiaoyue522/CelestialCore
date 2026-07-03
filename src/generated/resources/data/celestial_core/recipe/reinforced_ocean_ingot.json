@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "celestial_core:ocean_ingot"
+    },
+    {
+      "item": "celestial_core:guardian_spike"
+    },
+    {
+      "item": "celestial_core:guardian_spike"
+    },
+    {
+      "item": "celestial_core:guardian_spike"
+    },
+    {
+      "item": "celestial_core:guardian_spike"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_core:reinforced_ocean_ingot"
+  }
+}

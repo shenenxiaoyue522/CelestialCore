@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public enum CCMaterials implements IMatVanillaType {
-    GUARDIAN_OCEAN("guardian_ocean", 3, SoundEvents.ARMOR_EQUIP_GOLD,
+    OCEAN("ocean", 3, SoundEvents.ARMOR_EQUIP_GOLD,
             new ToolStats(1200, 8, 6, 1, 12),
             new ArmorStats(30, new int[]{3, 6, 8, 3}, 2, 0, 12),
             GenItemVanillaType.TOOL_GEN, GenItemVanillaType.ARMOR_GEN,
@@ -73,9 +73,9 @@ public enum CCMaterials implements IMatVanillaType {
         this.durability = armor.durability();
     }
 
-    final ItemLike[] INGOTS = {CCItems.GUARDIAN_OCEAN_INGOT, CCItems.SAKURA_STEEL, CCItems.VIRTUAL_GOLD_INGOT};
-    final ItemLike[] NUGGETS = {CCItems.GUARDIAN_OCEAN_NUGGET, CCItems.SAKURA_STEEL_NUGGET, CCItems.VIRTUAL_GOLD_NUGGET};
-    final BlockEntry<?>[] BLOCKS = {CCItems.GUARDIAN_OCEAN_BLOCK, CCItems.SAKURA_STEEL_BLOCK, CCItems.VIRTUAL_GOLD_BLOCK};
+    final ItemLike[] INGOTS = {CCItems.REINFORCED_OCEAN_INGOT, CCItems.SAKURA_STEEL, CCItems.VIRTUAL_GOLD_INGOT};
+    final ItemLike[] NUGGETS = {CCItems.REINFORCED_OCEAN_NUGGET, CCItems.SAKURA_STEEL_NUGGET, CCItems.VIRTUAL_GOLD_NUGGET};
+    final BlockEntry<?>[] BLOCKS = {CCItems.REINFORCED_OCEAN_BLOCK, CCItems.SAKURA_STEEL_BLOCK, CCItems.VIRTUAL_GOLD_BLOCK};
 
     @Override
     public Item getIngot() {

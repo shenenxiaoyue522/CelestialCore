@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "celestial_core:reinforced_ocean_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "celestial_core:blocks/reinforced_ocean_block"
+}

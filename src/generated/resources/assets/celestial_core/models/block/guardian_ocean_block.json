@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "celestial_core:block/guardian_ocean_block"
-  }
-}

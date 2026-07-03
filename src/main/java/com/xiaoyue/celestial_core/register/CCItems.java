@@ -19,14 +19,14 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 
 public class CCItems {
 
-    public static final BlockEntry<Block> SAKURA_STEEL_BLOCK, GUARDIAN_OCEAN_BLOCK, VIRTUAL_GOLD_BLOCK;
+    public static final BlockEntry<Block> SAKURA_STEEL_BLOCK, REINFORCED_OCEAN_BLOCK, VIRTUAL_GOLD_BLOCK;
 
     public static final ItemEntry<CCTooltipItem> TREASURE_FRAGMENT, VOID_ESSENCE, FIRE_ESSENCE, OCEAN_ESSENCE,
             WARDEN_SCLERITE, LIGHT_FRAGMENT, MIDNIGHT_FRAGMENT, DEATH_ESSENCE, PURE_NETHER_STAR, SHULKER_SCRAP,
             SOARING_WINGS, HEART_FRAGMENT, SAKURA_FRAGMENT, GUARDIAN_SPIKE, BROKEN_TOTEM;
 
-    public static final ItemEntry<Item> EARTH_CORE, SAKURA_STEEL, SAKURA_STEEL_NUGGET, OCEAN_INGOT, GUARDIAN_OCEAN_INGOT,
-            GUARDIAN_OCEAN_NUGGET, VIRTUAL_GOLD_INGOT, VIRTUAL_GOLD_NUGGET;
+    public static final ItemEntry<Item> EARTH_CORE, SAKURA_STEEL, SAKURA_STEEL_NUGGET, OCEAN_INGOT, REINFORCED_OCEAN_INGOT,
+            REINFORCED_OCEAN_NUGGET, VIRTUAL_GOLD_INGOT, VIRTUAL_GOLD_NUGGET;
 
     public static final ItemEntry<LootTableBox> JUNGLE_PYRAMID_LOOT_BOX, DESERT_PYRAMID_LOOT_BOX,
             IGLOO_LOOT_BOX, MANSON_LOOT_BOX, PILLAGER_OUTPOST_LOOT_BOX;
@@ -37,17 +37,17 @@ public class CCItems {
         CelestialCore.REGISTRATE.defaultCreativeTab(CelestialCore.TAB.getKey());
         SAKURA_STEEL_BLOCK = CelestialCore.REGISTRATE.block("sakura_steel_block", p -> new Block(p.strength(5f)))
                 .item((b, p) -> new BlockItem(b, p.rarity(Rarity.EPIC))).build().defaultLoot().defaultLang().register();
-        GUARDIAN_OCEAN_BLOCK = CelestialCore.REGISTRATE.block("guardian_ocean_block", p -> new Block(p.strength(6f)))
+        REINFORCED_OCEAN_BLOCK = CelestialCore.REGISTRATE.block("reinforced_ocean_block", p -> new Block(p.strength(6f)))
                 .item((b, p) -> new BlockItem(b, p.rarity(Rarity.RARE))).build().defaultLoot().defaultLang().register();
         VIRTUAL_GOLD_BLOCK = CelestialCore.REGISTRATE.block("virtual_gold_block", p -> new Block(p.strength(7f)))
                 .item((b, p) -> new BlockItem(b, p.rarity(Rarity.EPIC))).build().defaultLoot().defaultLang().register();
-        GUARDIAN_OCEAN_INGOT = material("guardian_ocean_ingot", p -> new CustomNameColorItem(ChatFormatting.BLUE));
+        REINFORCED_OCEAN_INGOT = material("reinforced_ocean_ingot", p -> new CustomNameColorItem(ChatFormatting.BLUE));
         OCEAN_INGOT = material("ocean_ingot", p -> new CustomNameColorItem(ChatFormatting.BLUE));
         SAKURA_STEEL = material("sakura_steel", p -> new Item(p.rarity(Rarity.EPIC)));
         SAKURA_STEEL_NUGGET = material("sakura_steel_nugget", p -> new Item(p.rarity(Rarity.EPIC)));
         VIRTUAL_GOLD_INGOT = material("virtual_gold_ingot", p -> new CustomNameColorItem(ChatFormatting.DARK_PURPLE));
         EARTH_CORE = material("earth_core", p -> new CustomNameColorItem(ChatFormatting.DARK_PURPLE));
-        GUARDIAN_OCEAN_NUGGET = material("guardian_ocean_nugget", p -> new CustomNameColorItem(ChatFormatting.BLUE));
+        REINFORCED_OCEAN_NUGGET = material("reinforced_ocean_nugget", p -> new CustomNameColorItem(ChatFormatting.BLUE));
         VIRTUAL_GOLD_NUGGET = material("virtual_gold_nugget", p -> new CCTooltipItem(p, false, ChatFormatting.DARK_PURPLE,
                 () -> CCLangData.VIRTUAL_GOLD_NUGGET.get(CCLangData.chance(CCModConfig.SERVER.virtualGoldNuggetChance.get()))));
         FIRE_ESSENCE = material("fire_essence", p -> new CCTooltipItem(p, false, ChatFormatting.YELLOW,

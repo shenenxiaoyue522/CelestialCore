@@ -73,7 +73,7 @@ public class CCRecipeGen {
                 .requires(Items.IRON_INGOT).requires(Items.PRISMARINE_CRYSTALS).requires(Items.PRISMARINE_CRYSTALS).requires(Items.PRISMARINE_SHARD)
                 .requires(Items.PRISMARINE_SHARD)
                 .save(pvd);
-        unlock(pvd, ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CCItems.GUARDIAN_OCEAN_INGOT, 1)::unlockedBy, CCItems.OCEAN_INGOT.get())
+        unlock(pvd, ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CCItems.REINFORCED_OCEAN_INGOT, 1)::unlockedBy, CCItems.OCEAN_INGOT.get())
                 .requires(CCItems.OCEAN_INGOT).requires(CCItems.GUARDIAN_SPIKE).requires(CCItems.GUARDIAN_SPIKE).requires(CCItems.GUARDIAN_SPIKE)
                 .requires(CCItems.GUARDIAN_SPIKE)
                 .save(pvd);
@@ -82,7 +82,7 @@ public class CCRecipeGen {
                 .save(pvd);
 
         genMetalStorage(pvd, CCItems.SAKURA_STEEL.get(), CCItems.SAKURA_STEEL_NUGGET.get(), CCItems.SAKURA_STEEL_BLOCK.asItem());
-        genMetalStorage(pvd, CCItems.GUARDIAN_OCEAN_INGOT.get(), CCItems.GUARDIAN_OCEAN_NUGGET.get(), CCItems.GUARDIAN_OCEAN_BLOCK.asItem());
+        genMetalStorage(pvd, CCItems.REINFORCED_OCEAN_INGOT.get(), CCItems.REINFORCED_OCEAN_NUGGET.get(), CCItems.REINFORCED_OCEAN_BLOCK.asItem());
         genMetalStorage(pvd, CCItems.VIRTUAL_GOLD_INGOT.get(), CCItems.VIRTUAL_GOLD_NUGGET.get(), CCItems.VIRTUAL_GOLD_BLOCK.asItem());
 
         for (int i = 0; i < CCMaterials.values().length; i++) {

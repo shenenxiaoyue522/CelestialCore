@@ -29,7 +29,7 @@ public class CCDataMapGen {
         DTAttributeConfigGen.add(attr, CCAttributes.TOUGHNESS_PENETRATION.key(), true, 25400);
 
         DataMapProvider.Builder<ArmorImmunity, ArmorMaterial> armor = pvd.builder(L2DamageTracker.ARMOR.reg());
-        armor.add(CCMaterials.GUARDIAN_OCEAN.getArmorMaterial(), ArmorImmunity.of(false, MobEffects.DIG_SLOWDOWN.value()), false);
+        armor.add(CCMaterials.OCEAN.getArmorMaterial(), ArmorImmunity.of(false, MobEffects.DIG_SLOWDOWN.value()), false);
         armor.add(CCMaterials.SAKURA.getArmorMaterial(), ArmorImmunity.of(false, MobEffects.POISON.value()), false);
         armor.add(CCMaterials.VIRTUAL_GOLD.getArmorMaterial(), ArmorImmunity.of(false, MobEffects.WITHER.value()), false);
     }

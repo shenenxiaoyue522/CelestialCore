@@ -1,6 +1,6 @@
 {
   "values": {
-    "celestial_core:guardian_ocean": {
+    "celestial_core:ocean": {
       "full": false,
       "set": [
         "minecraft:mining_fatigue"
