@@ -55,7 +55,7 @@ public class CCModConfig {
             builder.push("items");
             sakuraToolRecoveryTime = builder
                     .comment("Time required to restore durability each time")
-                    .defineInRange("sakuraToolRecoveryTime", 5, 0, 100);
+                    .defineInRange("sakuraToolRecoveryTime", 5, 1, 100);
             virtualGoldToolPerAdd = builder
                     .comment("Percentage bonus provided by each enchantment")
                     .defineInRange("virtualGoldToolPerAdd", 0.05, 0.01, 1);
