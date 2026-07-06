@@ -43,7 +43,7 @@ public class EntityIntData extends GeneralCapabilityTemplate<LivingEntity, Entit
 
     public static final GeneralCapabilityHolder<LivingEntity, EntityIntData> HOLDER =
             new GeneralCapabilityHolder<>(CelestialCore.loc("int_data"), CAPABILITY, EntityIntData.class,
-                    EntityIntData::new, LivingEntity.class, LivingEntity::isAlive);
+                    EntityIntData::new, LivingEntity.class, e -> true);
 
     @SerialClass.SerialField
     private final Map<String, Integer> data = new HashMap<>();
