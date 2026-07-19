@@ -9,8 +9,6 @@ import net.minecraft.world.level.block.Block;
 import java.util.List;
 
 public class FluidTransformationRecipeBuilder extends BaseRecipeBuilder<FluidTransformationRecipeBuilder, FluidTransformationRecipe, FluidTransformationRecipe, FluidTransformationRecipe.Inv> {
-
-
     public FluidTransformationRecipeBuilder(List<Ingredient> inputs, Block fluid, ItemStack output) {
         super(CCRecipes.RS_TRANSFORMATION.get(), output.getItem());
         this.recipe.inputs = inputs;
