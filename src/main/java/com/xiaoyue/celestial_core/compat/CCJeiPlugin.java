@@ -14,7 +14,7 @@ public class CCJeiPlugin implements IModPlugin {
 
     public static final ResourceLocation ID = CelestialCore.loc("main");
     public static final ResourceLocation TEXTURE = CelestialCore.loc("textures/gui/jei.png");
-    public final TransformationRecipeCategory TRANSFORMATION = new TransformationRecipeCategory();
+    public final FluidTransformationRecipeCategory TRANSFORMATION = new FluidTransformationRecipeCategory();
 
     @Override
     public ResourceLocation getPluginUid() {

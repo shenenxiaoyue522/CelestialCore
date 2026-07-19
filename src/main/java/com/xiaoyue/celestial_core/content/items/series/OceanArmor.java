@@ -17,7 +17,7 @@ public class OceanArmor extends ExtraArmorConfig {
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
-        if (EntityUtils.getSeriesArmorAmount(player, CCMaterials.GUARDIAN_OCEAN) == 4) {
+        if (EntityUtils.getSeriesArmorAmount(player, CCMaterials.OCEAN) == 4) {
             EntityUtils.addEct(player, MobEffects.WATER_BREATHING, 40);
         }
         super.onArmorTick(stack, world, player);

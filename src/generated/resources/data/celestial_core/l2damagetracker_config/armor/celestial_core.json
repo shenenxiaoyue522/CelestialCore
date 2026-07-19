@@ -1,6 +1,6 @@
 {
   "immune": {
-    "celestial_core:guardian_ocean": [
+    "celestial_core:ocean": [
       "minecraft:mining_fatigue"
     ],
     "celestial_core:sakura": [

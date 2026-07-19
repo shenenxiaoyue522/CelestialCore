@@ -1,5 +1,6 @@
 {
   "type": "celestial_core:transformation",
+  "fluid": "minecraft:water",
   "inputs": [
     {
       "item": "minecraft:diamond"
@@ -10,6 +11,5 @@
   ],
   "output": {
     "item": "minecraft:heart_of_the_sea"
-  },
-  "stat": "minecraft:water"
+  }
 }

@@ -4,7 +4,7 @@ import com.tterrag.registrate.providers.RegistrateRecipeProvider;
 import com.tterrag.registrate.util.DataIngredient;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import com.xiaoyue.celestial_core.CelestialCore;
-import com.xiaoyue.celestial_core.content.recipes.TransformationRecipeBuilder;
+import com.xiaoyue.celestial_core.content.recipes.FluidTransformationRecipeBuilder;
 import com.xiaoyue.celestial_core.register.CCItems;
 import com.xiaoyue.celestial_core.register.CCMaterials;
 import com.xiaoyue.celestial_core.utils.ItemUtils;
@@ -31,7 +31,7 @@ public class CCRecipeGen {
     public static String currentFolder = "";
 
     public static void onRecipeGen(RegistrateRecipeProvider pvd) {
-        unlock(pvd, new TransformationRecipeBuilder(List.of(Ingredient.of(Items.DIAMOND), Ingredient.of(CCItems.OCEAN_ESSENCE)), Blocks.WATER,
+        unlock(pvd, new FluidTransformationRecipeBuilder(List.of(Ingredient.of(Items.DIAMOND), Ingredient.of(CCItems.OCEAN_ESSENCE)), Blocks.WATER,
                 Items.HEART_OF_THE_SEA.getDefaultInstance())::unlockedBy, Items.DIAMOND).save(pvd, getID(Items.HEART_OF_THE_SEA));
 
         unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CCItems.EARTH_CORE, 1)::unlockedBy, Items.CRYING_OBSIDIAN)
@@ -74,7 +74,7 @@ public class CCRecipeGen {
                 .requires(Items.IRON_INGOT).requires(Items.PRISMARINE_CRYSTALS).requires(Items.PRISMARINE_CRYSTALS).requires(Items.PRISMARINE_SHARD)
                 .requires(Items.PRISMARINE_SHARD)
                 .save(pvd);
-        unlock(pvd, ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CCItems.GUARDIAN_OCEAN_INGOT, 1)::unlockedBy, CCItems.OCEAN_INGOT.get())
+        unlock(pvd, ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, CCItems.REINFORCED_OCEAN_INGOT, 1)::unlockedBy, CCItems.OCEAN_INGOT.get())
                 .requires(CCItems.OCEAN_INGOT).requires(CCItems.GUARDIAN_SPIKE).requires(CCItems.GUARDIAN_SPIKE).requires(CCItems.GUARDIAN_SPIKE)
                 .requires(CCItems.GUARDIAN_SPIKE)
                 .save(pvd);
@@ -83,7 +83,7 @@ public class CCRecipeGen {
                 .save(pvd);
 
         genMetalStorage(pvd, CCItems.SAKURA_STEEL.get(), CCItems.SAKURA_STEEL_NUGGET.get(), CCItems.SAKURA_STEEL_BLOCK.asItem());
-        genMetalStorage(pvd, CCItems.GUARDIAN_OCEAN_INGOT.get(), CCItems.GUARDIAN_OCEAN_NUGGET.get(), CCItems.GUARDIAN_OCEAN_BLOCK.asItem());
+        genMetalStorage(pvd, CCItems.REINFORCED_OCEAN_INGOT.get(), CCItems.REINFORCED_OCEAN_NUGGET.get(), CCItems.REINFORCED_OCEAN_BLOCK.asItem());
         genMetalStorage(pvd, CCItems.VIRTUAL_GOLD_INGOT.get(), CCItems.VIRTUAL_GOLD_NUGGET.get(), CCItems.VIRTUAL_GOLD_BLOCK.asItem());
 
         for (int i = 0; i < CCMaterials.values().length; i++) {
