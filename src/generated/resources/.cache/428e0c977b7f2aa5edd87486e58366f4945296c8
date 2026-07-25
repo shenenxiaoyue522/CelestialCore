@@ -1,9 +1,9 @@
-// 1.21.1	2026-07-03T18:18:30.8322179	Registrate Provider for celestial_core [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
+// 1.21.1	2026-07-25T20:48:58.1984079	Registrate Provider for celestial_core [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
 99a7f3d69907dceaaaddc26110aab9bac11e9293 assets/celestial_core/blockstates/reinforced_ocean_block.json
 bf54a41af3f10b2efc158f6b2b934fd7f8bc5a7a assets/celestial_core/blockstates/sakura_steel_block.json
 f8145523e76e04d3259ae16718d09990eab9035b assets/celestial_core/blockstates/virtual_gold_block.json
-91d8e1f1e44ed824b3202b473563311776e9fcac assets/celestial_core/lang/en_ud.json
-41aa9342062bae40c2a75d76dada414fdb9b0280 assets/celestial_core/lang/en_us.json
+6be773c58533278abf887b2bf70099c483a1dd7f assets/celestial_core/lang/en_ud.json
+ddaa5ef952fb86b15e60e3023d9dd9ed7d5fe49c assets/celestial_core/lang/en_us.json
 4626c19d587390c3f1238a3952d60920a57ca198 assets/celestial_core/models/block/reinforced_ocean_block.json
 3a27bc9717d310fa4e8cb91f16660f0564d3cc4d assets/celestial_core/models/block/sakura_steel_block.json
 e7fb3e48020017b0712255b3526dca7be0a20621 assets/celestial_core/models/block/virtual_gold_block.json
