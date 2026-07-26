@@ -38,7 +38,7 @@ public class FluidTransformationRecipeCategory extends BaseRecipeCategory<FluidT
 
     @Override
     public Component getTitle() {
-        return CCLangData.TRANSFORMATION_RECIPE_TITLE.get();
+        return CCLangData.FLUID_TRANSFORMATION_RECIPE_TITLE.get();
     }
 
     @Override
