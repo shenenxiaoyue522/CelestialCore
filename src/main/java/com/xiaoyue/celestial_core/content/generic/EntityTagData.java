@@ -2,23 +2,20 @@ package com.xiaoyue.celestial_core.content.generic;
 
 import com.xiaoyue.celestial_core.CelestialCore;
 import com.xiaoyue.celestial_core.register.CCObjects;
-import dev.xkmc.l2serial.serialization.codec.TagCodec;
+import dev.xkmc.l2core.capability.attachment.GeneralCapabilityHolder;
+import dev.xkmc.l2core.capability.attachment.GeneralCapabilityTemplate;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
-import dev.xkmc.l2serial.util.Wrappers;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.LivingEntity;
-import net.neoforged.neoforge.attachment.IAttachmentHolder;
-import net.neoforged.neoforge.attachment.IAttachmentSerializer;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 @SerialClass
-public class EntityTagData implements IAttachmentSerializer<CompoundTag, EntityTagData> {
+public class EntityTagData extends GeneralCapabilityTemplate<LivingEntity, EntityTagData> {
+
+    public static final GeneralCapabilityHolder<LivingEntity, EntityTagData> HOLDER = new GeneralCapabilityHolder<>(CelestialCore.loc("tag_data"),
+            EntityTagData.class, EntityTagData::new, LivingEntity.class, e -> true);
 
     public static void syncData(LivingEntity entity, String flag, int data) {
         if (entity.level().isClientSide()) return;
@@ -59,15 +56,5 @@ public class EntityTagData implements IAttachmentSerializer<CompoundTag, EntityT
 
     public void removeData(String key) {
         data.remove(key);
-    }
-
-    @Override
-    public EntityTagData read(IAttachmentHolder iAttachmentHolder, CompoundTag tag, HolderLookup.Provider provider) {
-        return Objects.requireNonNull(Wrappers.get(() -> new TagCodec(provider).fromTag(tag, EntityTagData.class, null)));
-    }
-
-    @Override
-    public @Nullable CompoundTag write(EntityTagData entityIntData, HolderLookup.Provider provider) {
-        return Objects.requireNonNull(new TagCodec(provider).toTag(new CompoundTag(), entityIntData));
     }
 }

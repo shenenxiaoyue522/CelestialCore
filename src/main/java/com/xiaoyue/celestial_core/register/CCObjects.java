@@ -13,11 +13,9 @@ public class CCObjects {
 
     public static final NeoForgeRegister<AttachmentType<?>> TYPE = CelestialCore.EXTRA.neoforgeRegister(NeoForgeRegistries.ATTACHMENT_TYPES);
 
-    public static final Supplier<AttachmentType<EntityTagData>> TAG_DATA = TYPE.object("tag_data", () -> AttachmentType.builder(EntityTagData::new)
-            .serialize(new EntityTagData()).build());
+    public static final Supplier<AttachmentType<EntityTagData>> TAG_DATA = TYPE.object("tag_data", EntityTagData.HOLDER::type);
 
-    public static final Supplier<AttachmentType<PlayerFlagData>> FLAG_DATA = TYPE.object("flag_data", () -> AttachmentType.builder(PlayerFlagData::new)
-            .serialize(new PlayerFlagData()).copyOnDeath().build());
+    public static final Supplier<AttachmentType<PlayerFlagData>> FLAG_DATA = TYPE.object("flag_data", PlayerFlagData.HOLDER::type);
 
     public static void register() {
     }
