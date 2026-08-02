@@ -71,7 +71,6 @@ public class CCModConfig {
     }
 
     public static final Server SERVER = CelestialCore.EXTRA.initConfig(ModConfig.Type.SERVER, Server::new);
-    public static final String SERVER_PATH = "celestial_configs/" + MODID + "-" + ModConfig.Type.SERVER.extension() + ".toml";
 
     public static void init() {
     }

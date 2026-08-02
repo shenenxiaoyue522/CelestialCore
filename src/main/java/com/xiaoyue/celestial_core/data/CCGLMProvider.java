@@ -32,49 +32,49 @@ public class CCGLMProvider {
                 new LootTableIdCondition.Builder(BuiltInLootTables.END_CITY_TREASURE.location()).build()));
 
         pvd.add("drops/fire_essence", new AddItemModifier(CCItems.FIRE_ESSENCE.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.fireEssenceChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.fireEssenceChance),
                 entityType(EntityType.BLAZE), LootTableTemplate.byPlayer().build()));
         pvd.add("drops/ocean_essence", new AddItemModifier(CCItems.OCEAN_ESSENCE.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.oceanEssenceChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.oceanEssenceChance),
                 entityType(EntityType.GUARDIAN), LootTableTemplate.byPlayer().build()));
         pvd.add("drops/death_essence", new AddItemModifier(CCItems.DEATH_ESSENCE.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.deathEssenceChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.deathEssenceChance),
                 damage(CCDamageTypes.WITHER),
-                new EntityHealthCondition(IntConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.deathEssenceMinHealth))));
+                new EntityHealthCondition(IntConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.deathEssenceMinHealth))));
         pvd.add("drops/warden_sclerite", new AddItemModifier(CCItems.WARDEN_SCLERITE.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.wardenScleriteChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.wardenScleriteChance),
                 entityType(EntityType.WARDEN), LootTableTemplate.byPlayer().build()));
         pvd.add("drops/shulker_scrap", new AddItemModifier(CCItems.SHULKER_SCRAP.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.shulkerScrapChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.shulkerScrapChance),
                 entityType(EntityType.SHULKER), damage(DamageTypeTags.IS_EXPLOSION)));
         pvd.add("drops/light_fragment", new AddItemModifier(CCItems.LIGHT_FRAGMENT.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.lightFragmentChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.lightFragmentChance),
                 entityType(EntityType.HUSK), new PlayerFlagCondition(CelestialFlags.NETHER_STAGE)));
         pvd.add("drops/midnight_fragment", new AddItemModifier(CCItems.MIDNIGHT_FRAGMENT.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.midnightFragmentChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.midnightFragmentChance),
                 entityType(EntityType.STRAY), new PlayerFlagCondition(CelestialFlags.NETHER_STAGE)));
         pvd.add("drops/soaring_wings", new AddItemModifier(CCItems.SOARING_WINGS.get(), null,
                 entityType(EntityType.PHANTOM), LootTableTemplate.byPlayer().build(),
                 entity(EntityPredicate.Builder.entity().located(LocationPredicate.Builder.atYLocation(MinMaxBounds.Doubles.atLeast(619))))));
         pvd.add("drops/pure_nether_star", new AddItemModifier(CCItems.PURE_NETHER_STAR.get(), null,
                 entityType(EntityType.WITHER), new PlayerEffectCondition(MobEffectCategory.BENEFICIAL,
-                IntConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.pureNetherStarEffectCount))));
+                IntConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.pureNetherStarEffectCount))));
         pvd.add("drops/heart_fragment", new AddItemModifier(CCItems.HEART_FRAGMENT.get(), null,
                 entityType(EntityType.PILLAGER), new ChargedCreeperKillCondition()));
         pvd.add("drops/guardian_spike", new AddItemModifier(CCItems.GUARDIAN_SPIKE.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.guardianSpikeChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.guardianSpikeChance),
                 entityType(EntityType.GUARDIAN)));
         pvd.add("drops/elder_guardian_spike", new AddItemModifier(CCItems.GUARDIAN_SPIKE.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.guardianSpikeChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.guardianSpikeChance),
                 entityType(EntityType.ELDER_GUARDIAN)));
 
         pvd.add("drops/sakura_fragment", new ExtraDropModifier(CCItems.SAKURA_FRAGMENT.get(),
-                DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.sakuraFragmentChance),
+                DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.sakuraFragmentChance),
                 block(Blocks.CHERRY_LEAVES)));
 
         {
             var item = CCMaterials.VIRTUAL_GOLD.getNugget();
-            DoubleConfigValue chance = DoubleConfigValue.of(CCModConfig.SERVER_PATH, CCModConfig.SERVER.virtualGoldNuggetChance);
+            DoubleConfigValue chance = DoubleConfigValue.of(CCModConfig.SERVER.getPath(), CCModConfig.SERVER.virtualGoldNuggetChance);
             pvd.add("drops/virtual_gold_head", new AddItemModifier(item, chance,
                     new EquipEnchCondition(Items.GOLDEN_HELMET, true)));
             pvd.add("drops/virtual_gold_chest", new AddItemModifier(item, chance,
