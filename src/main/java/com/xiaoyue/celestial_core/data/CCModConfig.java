@@ -5,8 +5,6 @@ import com.xiaoyue.celestial_invoker.invoker.config.wrapper.ConfigWrapper;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
-import static com.xiaoyue.celestial_core.CelestialCore.MODID;
-
 public class CCModConfig {
 
     public static class Server extends ConfigWrapper {

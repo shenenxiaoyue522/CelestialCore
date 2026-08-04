@@ -1,12 +1,12 @@
 package com.xiaoyue.celestial_core.content.generic;
 
 import com.xiaoyue.celestial_core.CelestialCore;
-import com.xiaoyue.celestial_core.register.CCObjects;
 import dev.xkmc.l2core.capability.player.PlayerCapabilityHolder;
 import dev.xkmc.l2core.capability.player.PlayerCapabilityNetworkHandler;
 import dev.xkmc.l2core.capability.player.PlayerCapabilityTemplate;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 
@@ -20,7 +20,10 @@ public class PlayerFlagData extends PlayerCapabilityTemplate<PlayerFlagData> {
 
     public static void addFlag(LivingEntity entity, String str) {
         if (entity instanceof Player player) {
-            player.getData(CCObjects.FLAG_DATA).addFlag(str);
+            HOLDER.getOrCreate(player).addFlag(str);
+            if (player instanceof ServerPlayer sp) {
+                HOLDER.network.toClient(sp);
+            }
         } else {
             entity.addTag(str);
         }
@@ -28,11 +31,10 @@ public class PlayerFlagData extends PlayerCapabilityTemplate<PlayerFlagData> {
 
     public static boolean hasFlag(LivingEntity entity, String str) {
         if (entity instanceof Player player) {
-            player.getData(CCObjects.FLAG_DATA).hasFlag(str);
+            return HOLDER.getOrCreate(player).hasFlag(str);
         } else {
             return entity.getTags().contains(str);
         }
-        return false;
     }
 
     @SerialField

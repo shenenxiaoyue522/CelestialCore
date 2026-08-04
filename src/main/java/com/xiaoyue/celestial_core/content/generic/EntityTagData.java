@@ -1,7 +1,6 @@
 package com.xiaoyue.celestial_core.content.generic;
 
 import com.xiaoyue.celestial_core.CelestialCore;
-import com.xiaoyue.celestial_core.register.CCObjects;
 import dev.xkmc.l2core.capability.attachment.GeneralCapabilityHolder;
 import dev.xkmc.l2core.capability.attachment.GeneralCapabilityTemplate;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
@@ -24,22 +23,19 @@ public class EntityTagData extends GeneralCapabilityTemplate<LivingEntity, Entit
 
     public static void addData(LivingEntity entity, String key, int value) {
         if (!entity.isDeadOrDying()) {
-            EntityTagData cap = entity.getData(CCObjects.TAG_DATA);
-            cap.addData(key, value);
+            HOLDER.getOrCreate(entity).addData(key, value);
         }
     }
 
     public static int getData(LivingEntity entity, String key) {
         if (!entity.isDeadOrDying()) {
-            EntityTagData cap = entity.getData(CCObjects.TAG_DATA);
-            return cap.getData(key);
+            return HOLDER.getOrCreate(entity).getData(key);
         }
         return 0;
     }
 
     public static void removeData(LivingEntity entity, String key) {
-        EntityTagData cap = entity.getData(CCObjects.TAG_DATA);
-        cap.removeData(key);
+        HOLDER.getOrCreate(entity).removeData(key);
         syncData(entity, key, 0);
     }
 

@@ -24,7 +24,8 @@ public class VirtualGoldArmorItem extends GenericArmorItem {
         super(material, slot, prop, config);
     }
 
-    public static final ArmorConfig ARMOR_GEN = new ArmorConfig((mat, slot, prop) -> new VirtualGoldArmorItem(mat.getArmorMaterial(), slot, prop, mat.getExtraArmorConfig()));
+    public static final ArmorConfig ARMOR_GEN = new ArmorConfig((mat, slot, prop) ->
+            new VirtualGoldArmorItem(mat.getArmorMaterial(), slot, prop.stacksTo(1).durability(slot.getDurability(mat.armorDurability())), mat.getExtraArmorConfig()));
 
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
