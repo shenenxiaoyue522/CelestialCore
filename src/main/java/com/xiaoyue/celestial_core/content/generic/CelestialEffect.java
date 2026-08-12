@@ -6,20 +6,15 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 
 public class CelestialEffect extends MobEffect {
-    public final boolean showIcon;
-
-    public CelestialEffect(MobEffectCategory pCategory, int pColor, boolean showIcon) {
-        super(pCategory, pColor);
-        this.showIcon = showIcon;
-    }
-
     public CelestialEffect(MobEffectCategory pCategory, int pColor) {
         super(pCategory, pColor);
-        this.showIcon = true;
     }
 
     public boolean beRemove(MobEffectInstance instance, LivingEntity entity) {
         return true;
+    }
+
+    public void onExpired(MobEffectInstance instance, LivingEntity entity) {
     }
 
     public static MobEffectCategory getCategory(int i) {

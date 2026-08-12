@@ -50,6 +50,15 @@ public class CCGeneralEventHandler {
     }
 
     @SubscribeEvent
+    public static void onEffectExpired(MobEffectEvent.Expired event) {
+        MobEffectInstance instance = event.getEffectInstance();
+        if (instance == null) return;
+        if (instance.getEffect() instanceof CelestialEffect effect) {
+            effect.onExpired(instance, event.getEntity());
+        }
+    }
+
+    @SubscribeEvent
     public static void onLivingTick(EntityTickEvent.Post event) {
         Entity e = event.getEntity();
         if (e instanceof LivingEntity entity) {
