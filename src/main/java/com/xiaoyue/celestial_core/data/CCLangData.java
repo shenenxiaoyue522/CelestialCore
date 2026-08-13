@@ -28,12 +28,15 @@ public enum CCLangData {
     AFTER_WITHER_DROP("After defeating %s, %s chance to drop from %s", 3),
     VOID_ESSENCE("Can be found in End City chests", 0),
     TREASURE_FRAGMENT("Can be found in Mineshaft chests", 0),
+    PERMAFROST_CRYSTAL("Can be found in Igloo chests", 0),
+    CURSED_ESSENCE("After defeating %s, %s chance to drop when killing creatures with curse enchanted weapon", 2),
     DEATH_ESSENCE("%s chance to drop when mobs with at least %s health is killed by wither effect", 2),
     PURE_NETHER_STAR("Dropped from %s when killed by player with more than %s beneficial effects", 2),
     SHULKER_SCRAP("%s chance to drop when %s is killed by explosion", 2),
     SOARING_WINGS("Dropped when %s is killed above y=%s", 2),
     HEART_FRAGMENT("Dropped when %s is killed by charged Creeper", 1),
     SAKURA_FRAGMENT("%s chance to drop from breaking cherry blossom leaves", 1),
+    CELESTIAL_FRAGMENT("At night, %s chance every %s seconds for something to fall on the player from above", 2),
     VIRTUAL_GOLD_NUGGET("%s chance to drop from ignited mobs with enchanted gold armors", 1),
     OCEAN_TOOL("Cancel underwater dig speed penalty", 0),
     FULL_SET("Full set effect: %s", 1),
@@ -101,6 +104,12 @@ public enum CCLangData {
 
     public static MutableComponent deathEssence(double v, int i) {
         return DEATH_ESSENCE.get(chance(v), num(i));
+    }
+
+    public static MutableComponent cursedEssence(double v) {
+        Player player = Proxy.getPlayer();
+        boolean cleared = player != null && PlayerFlagData.HOLDER.get(player).hasFlag(CelestialFlags.NETHER_STAGE);
+        return CURSED_ESSENCE.get(EntityType.WITHER.getDescription().copy().withStyle(cleared ? ChatFormatting.AQUA : ChatFormatting.RED), chance(v));
     }
 
     public static void addLang(RegistrateLangProvider pvd) {

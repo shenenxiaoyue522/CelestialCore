@@ -139,5 +139,11 @@
   "block.celestial_core.sakura_steel_block": "樱花钢块",
   "block.celestial_core.virtual_gold_block": "虚金块",
   "item.celestial_core.sakura_steel_nugget": "樱花钢粒",
-  "jei.fluid_transformation.title": "流体转化"
+  "jei.fluid_transformation.title": "流体转化",
+  "celestial_core.tooltip.cursed_essence": "击败%1$s后，使用带有诅咒附魔的武器杀死生物%2$s概率掉落",
+  "celestial_core.tooltip.permafrost_crystal": "在雪屋宝箱在概率开出",
+  "item.celestial_core.cursed_essence": "诅咒精华",
+  "item.celestial_core.permafrost_crystal": "寒地冰晶",
+  "celestial_core.tooltip.celestial_fragment": "夜晚时每经过%2$s秒就有%1$s概率从玩家上空坠落",
+  "item.celestial_core.celestial_fragment": "星月碎片"
 }

@@ -30,6 +30,9 @@ public class CCModConfig {
         public final ForgeConfigSpec.IntValue pureNetherStarEffectCount;
         public final ForgeConfigSpec.DoubleValue guardianSpikeChance;
         public final ForgeConfigSpec.DoubleValue brokenTotemChance;
+        public final ForgeConfigSpec.DoubleValue cursedEssenceChance;
+        public final ForgeConfigSpec.DoubleValue celestialFragmentChance;
+        public final ForgeConfigSpec.IntValue celestialFragmentInterval;
 
         public final ForgeConfigSpec.IntValue sakuraToolRecoveryTime;
         public final ForgeConfigSpec.DoubleValue virtualGoldToolPerAdd;
@@ -50,6 +53,9 @@ public class CCModConfig {
             pureNetherStarEffectCount = builder.defineInRange("pureNetherStarEffectCount", 12, 0, 100);
             guardianSpikeChance = builder.defineInRange("guardianSpikeChance", 0.2, 0, 1);
             brokenTotemChance = builder.defineInRange("brokenTotemChance", 0.5, 0, 1);
+            cursedEssenceChance = builder.defineInRange("cursedEssenceChance", 0.05, 0, 1);
+            celestialFragmentChance = builder.defineInRange("celestialFragmentChance", 0.5, 0, 1);
+            celestialFragmentInterval = builder.defineInRange("celestialFragmentInterval", 6000, 0, Integer.MAX_VALUE);
             builder.pop();
 
             builder.push("items");

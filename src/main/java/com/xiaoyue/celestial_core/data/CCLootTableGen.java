@@ -14,6 +14,7 @@ public class CCLootTableGen {
 
     public static final ResourceLocation MINESHAFT = CelestialCore.loc("abandoned_mineshaft");
     public static final ResourceLocation END_CITY = CelestialCore.loc("end_city_treasure");
+    public static final ResourceLocation IGLOO_CHEST = CelestialCore.loc("igloo_chest");
 
     public static void onLootGen(RegistrateLootTableProvider pvd) {
         pvd.addLootAction(LootContextParamSets.EMPTY, cons -> {
@@ -24,6 +25,10 @@ public class CCLootTableGen {
             cons.accept(END_CITY, LootTable.lootTable().withPool(LootPool.lootPool()
                     .add(LootTableTemplate.getItem(CCItems.VOID_ESSENCE.get(), 1).setWeight(1))
                     .add(LootTableTemplate.getItem(Items.AIR, 0).setWeight(4))
+            ));
+            cons.accept(IGLOO_CHEST, LootTable.lootTable().withPool(LootPool.lootPool()
+                    .add(LootTableTemplate.getItem(CCItems.PERMAFROST_CRYSTAL.get(), 1).setWeight(1))
+                    .add(LootTableTemplate.getItem(Items.AIR, 0).setWeight(2))
             ));
         });
     }

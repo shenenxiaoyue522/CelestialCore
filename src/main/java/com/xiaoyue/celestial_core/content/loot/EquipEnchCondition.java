@@ -1,7 +1,7 @@
 package com.xiaoyue.celestial_core.content.loot;
 
 import com.xiaoyue.celestial_core.register.CCLootModifier;
-import com.xiaoyue.celestial_core.utils.EnchUtils;
+import com.xiaoyue.celestial_core.utils.ItemUtils;
 import dev.xkmc.l2serial.serialization.SerialClass;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -43,7 +43,7 @@ public class EquipEnchCondition implements LootItemCondition {
         if (entity instanceof ArmorStand) return false;
         if (entity instanceof LivingEntity liv) {
             for (ItemStack stack : liv.getArmorSlots()) {
-                if (stack.is(armor) && EnchUtils.getEnchSize(stack) > 0) {
+                if (stack.is(armor) && ItemUtils.getEnchSize(stack) > 0) {
                     return !onFire || entity.isOnFire();
                 }
             }

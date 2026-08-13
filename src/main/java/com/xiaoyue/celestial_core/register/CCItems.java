@@ -22,7 +22,8 @@ public class CCItems {
 
     public static final ItemEntry<CCTooltipItem> TREASURE_FRAGMENT, VOID_ESSENCE, FIRE_ESSENCE, OCEAN_ESSENCE,
             WARDEN_SCLERITE, LIGHT_FRAGMENT, MIDNIGHT_FRAGMENT, DEATH_ESSENCE, PURE_NETHER_STAR, SHULKER_SCRAP,
-            SOARING_WINGS, HEART_FRAGMENT, SAKURA_FRAGMENT, GUARDIAN_SPIKE, BROKEN_TOTEM;
+            SOARING_WINGS, HEART_FRAGMENT, SAKURA_FRAGMENT, CELESTIAL_FRAGMENT, GUARDIAN_SPIKE, BROKEN_TOTEM, PERMAFROST_CRYSTAL,
+            CURSED_ESSENCE;
 
     public static final ItemEntry<Item> EARTH_CORE, SAKURA_STEEL, SAKURA_STEEL_NUGGET, OCEAN_INGOT, REINFORCED_OCEAN_INGOT,
             REINFORCED_OCEAN_NUGGET, VIRTUAL_GOLD_INGOT, VIRTUAL_GOLD_NUGGET;
@@ -61,6 +62,8 @@ public class CCItems {
                 () -> CCLangData.witherDrop(EntityType.STRAY, CCModConfig.COMMON.midnightFragmentChance.get())));
         DEATH_ESSENCE = material("death_essence", p -> new CCTooltipItem(p.rarity(Rarity.EPIC), false,
                 () -> CCLangData.deathEssence(CCModConfig.COMMON.deathEssenceChance.get(), CCModConfig.COMMON.deathEssenceMinHealth.get())));
+        CURSED_ESSENCE = material("cursed_essence", p -> new CCTooltipItem(p.rarity(Rarity.EPIC), false,
+                () -> CCLangData.cursedEssence(CCModConfig.COMMON.cursedEssenceChance.get())));
         PURE_NETHER_STAR = material("pure_nether_star", p -> new CCTooltipItem(p.rarity(Rarity.UNCOMMON), false,
                 () -> CCLangData.PURE_NETHER_STAR.get(CCLangData.entity(EntityType.WITHER), CCLangData.num(CCModConfig.COMMON.pureNetherStarEffectCount.get()))));
         SHULKER_SCRAP = material("shulker_scrap", p -> new CCTooltipItem(p.rarity(Rarity.EPIC), false,
@@ -71,11 +74,15 @@ public class CCItems {
                 () -> CCLangData.HEART_FRAGMENT.get(CCLangData.entity(EntityType.PILLAGER))));
         SAKURA_FRAGMENT = material("sakura_fragment", p -> new CCTooltipItem(p.rarity(IRarityUtils.PINK), true,
                 () -> CCLangData.SAKURA_FRAGMENT.get(CCLangData.chance(CCModConfig.COMMON.sakuraFragmentChance.get()))));
+        CELESTIAL_FRAGMENT = material("celestial_fragment", p -> new CCTooltipItem(p.rarity(Rarity.UNCOMMON), false,
+                () -> CCLangData.CELESTIAL_FRAGMENT.get(CCLangData.chance(CCModConfig.COMMON.celestialFragmentChance.get()),
+                        CCLangData.num(CCModConfig.COMMON.celestialFragmentInterval.get() / 20))));
         GUARDIAN_SPIKE = material("guardian_spike", p -> new CCTooltipItem(p.rarity(IRarityUtils.BLUE), false,
                 () -> CCLangData.simpleDrop(EntityType.GUARDIAN, CCModConfig.COMMON.guardianSpikeChance.get())));
         BROKEN_TOTEM = material("broken_totem", p -> new CCTooltipItem(p.rarity(Rarity.UNCOMMON), false,
                 () -> CCLangData.BROKEN_TOTEM.get(CCLangData.chance(CCModConfig.COMMON.brokenTotemChance.get()))));
         TREASURE_FRAGMENT = material("treasure_fragment", p -> new CCTooltipItem(p.rarity(Rarity.RARE), false, CCLangData.TREASURE_FRAGMENT::get));
+        PERMAFROST_CRYSTAL = material("permafrost_crystal", p -> new CCTooltipItem(p.rarity(Rarity.RARE), false, CCLangData.PERMAFROST_CRYSTAL::get));
         VOID_ESSENCE = material("void_essence", p -> new CCTooltipItem(p.rarity(Rarity.RARE), false, CCLangData.VOID_ESSENCE::get));
         JUNGLE_PYRAMID_LOOT_BOX = item("jungle_pyramid_loot_box", p -> new LootTableBox(p.rarity(Rarity.EPIC), BuiltInLootTables.JUNGLE_TEMPLE));
         DESERT_PYRAMID_LOOT_BOX = item("desert_pyramid_loot_box", p -> new LootTableBox(p.rarity(Rarity.UNCOMMON), BuiltInLootTables.DESERT_PYRAMID));

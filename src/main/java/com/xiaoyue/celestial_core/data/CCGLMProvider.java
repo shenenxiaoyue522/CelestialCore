@@ -13,6 +13,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -37,6 +38,8 @@ public class CCGLMProvider extends GlobalLootModifierProvider {
                 new LootTableIdCondition.Builder(BuiltInLootTables.ABANDONED_MINESHAFT).build()));
         add("chests/end_city_treasure", new AddLootTableModifier(CCLootTableGen.END_CITY,
                 new LootTableIdCondition.Builder(BuiltInLootTables.END_CITY_TREASURE).build()));
+        add("chests/igloo_chest", new AddLootTableModifier(CCLootTableGen.IGLOO_CHEST,
+                new LootTableIdCondition.Builder(BuiltInLootTables.IGLOO_CHEST).build()));
 
         add("drops/fire_essence", new AddItemModifier(CCItems.FIRE_ESSENCE.get(),
                 DoubleConfigValue.of(CCModConfig.COMMON_PATH, CCModConfig.COMMON.fireEssenceChance),
@@ -48,6 +51,9 @@ public class CCGLMProvider extends GlobalLootModifierProvider {
                 DoubleConfigValue.of(CCModConfig.COMMON_PATH, CCModConfig.COMMON.deathEssenceChance),
                 damage(CCDamageTypes.WITHER),
                 new EntityHealthCondition(IntConfigValue.of(CCModConfig.COMMON_PATH, CCModConfig.COMMON.deathEssenceMinHealth))));
+        add("drops/cursed_essence", new AddItemModifier(CCItems.CURSED_ESSENCE.get(),
+                DoubleConfigValue.of(CCModConfig.COMMON_PATH, CCModConfig.COMMON.cursedEssenceChance),
+                damage(CCDamageTypes.WITHER), new CurseEnchCondition(EquipmentSlot.MAINHAND)));
         add("drops/warden_sclerite", new AddItemModifier(CCItems.WARDEN_SCLERITE.get(),
                 DoubleConfigValue.of(CCModConfig.COMMON_PATH, CCModConfig.COMMON.wardenScleriteChance),
                 entityType(EntityType.WARDEN), LootTableTemplate.byPlayer().build()));

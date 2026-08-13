@@ -19,7 +19,7 @@ public class CCLootModifier {
     public static final RegistryEntry<Codec<FishingCooldownModifier>> FISHING_ITEM;
 
     public static final RegistryEntry<LootItemConditionType> PLAYER_FLAG, ENTITY_HEALTH, PLAYER_EFFECT,
-            CHARGED_CREEPER, EQUIP_ENCH;
+            CHARGED_CREEPER, EQUIP_ENCH, CURSE_ENCH;
 
     static {
         ADD_ITEM = reg("add_item", () -> AddItemModifier.CODEC);
@@ -32,6 +32,7 @@ public class CCLootModifier {
         PLAYER_EFFECT = reg("player_effect", PlayerEffectCondition.class);
         CHARGED_CREEPER = reg("charged_creeper_kill", ChargedCreeperKillCondition.class);
         EQUIP_ENCH = reg("equip_ench", EquipEnchCondition.class);
+        CURSE_ENCH = reg("curse_ench", CurseEnchCondition.class);
     }
 
     private static <T extends IGlobalLootModifier> RegistryEntry<Codec<T>> reg(String str, NonNullSupplier<Codec<T>> codec) {

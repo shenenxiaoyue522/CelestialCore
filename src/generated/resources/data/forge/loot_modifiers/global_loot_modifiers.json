@@ -2,6 +2,7 @@
   "entries": [
     "celestial_core:drops/sakura_fragment",
     "celestial_core:drops/ocean_essence",
+    "celestial_core:chests/igloo_chest",
     "celestial_core:drops/virtual_gold_legs",
     "celestial_core:drops/soaring_wings",
     "celestial_core:drops/guardian_spike",
@@ -17,6 +18,7 @@
     "celestial_core:drops/shulker_scrap",
     "celestial_core:drops/death_essence",
     "celestial_core:drops/virtual_gold_chest",
+    "celestial_core:drops/cursed_essence",
     "celestial_core:drops/light_fragment",
     "celestial_core:drops/virtual_gold_head"
   ],

@@ -1,0 +1,22 @@
+{
+  "type": "celestial_core:add_item",
+  "chance": "celestial_configs/celestial_core-common.toml/materials.cursedEssenceChance",
+  "conditions": [
+    {
+      "condition": "minecraft:damage_source_properties",
+      "predicate": {
+        "tags": [
+          {
+            "expected": true,
+            "id": "celestial_core:wither"
+          }
+        ]
+      }
+    },
+    {
+      "condition": "celestial_core:curse_ench",
+      "slot": "MAINHAND"
+    }
+  ],
+  "item": "celestial_core:cursed_essence"
+}
