@@ -25,7 +25,7 @@ public class CCLootModifier {
     public static final Supplier<MapCodec<FishingCooldownModifier>> FISHING_ITEM;
 
     public static final Supplier<LootItemConditionType> PLAYER_FLAG, ENTITY_HEALTH, PLAYER_EFFECT,
-            CHARGED_CREEPER, EQUIP_ENCH;
+            CHARGED_CREEPER, EQUIP_ENCH, CURSE_ENCH;
 
     static {
         ADD_ITEM = LOOT.object("add_item", () -> AddItemModifier.CODEC);
@@ -38,6 +38,7 @@ public class CCLootModifier {
         PLAYER_EFFECT = condition("player_effect", PlayerEffectCondition.class);
         CHARGED_CREEPER = condition("charged_creeper_kill", ChargedCreeperKillCondition.class);
         EQUIP_ENCH = condition("equip_ench", EquipEnchCondition.class);
+        CURSE_ENCH = condition("curse_ench", CurseEnchCondition.class);
     }
 
     private static <T extends LootItemCondition> Supplier<LootItemConditionType> condition(String id, Class<T> codec) {

@@ -2,9 +2,11 @@
   "entries": [
     "celestial_core:chests/abandoned_mineshaft",
     "celestial_core:chests/end_city_treasure",
+    "celestial_core:chests/igloo_chest",
     "celestial_core:drops/fire_essence",
     "celestial_core:drops/ocean_essence",
     "celestial_core:drops/death_essence",
+    "celestial_core:drops/cursed_essence",
     "celestial_core:drops/warden_sclerite",
     "celestial_core:drops/shulker_scrap",
     "celestial_core:drops/light_fragment",

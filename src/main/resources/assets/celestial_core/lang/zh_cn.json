@@ -175,5 +175,17 @@
   "effect.celestial_core.silent.desc": "你不会再发出震动",
   "effect.celestial_core.soul_shatter.desc": "降低最大生命值和移动速度",
   "effect.celestial_core.unyielding.desc": "阻止你死亡",
-  "effect.celestial_core.violent.desc": "近战伤害穿透护甲"
+  "effect.celestial_core.violent.desc": "近战伤害穿透护甲",
+  "celestial_core.tooltip.permafrost_crystal": "在雪屋宝箱在概率开出",
+  "item.celestial_core.cursed_essence": "诅咒精华",
+  "item.celestial_core.permafrost_crystal": "寒地冰晶",
+  "celestial_core.tooltip.celestial_fragment": "夜晚时每经过%2$s秒就有%1$s概率从玩家上空坠落",
+  "item.celestial_core.celestial_fragment": "星月碎片",
+  "celestial_core.configuration.celestialFragmentChance": "星月碎片概率",
+  "celestial_core.configuration.celestialFragmentChance.tooltip": " 默认: 0.5\n 范围: 0.0 ~ 1.0",
+  "celestial_core.configuration.celestialFragmentInterval": "星月碎片间隔",
+  "celestial_core.configuration.celestialFragmentInterval.tooltip": " 默认: 6000\n 范围: > 0",
+  "celestial_core.configuration.cursedEssenceChance": "诅咒精华概率",
+  "celestial_core.configuration.cursedEssenceChance.tooltip": " 默认: 0.05\n 范围: 0.0 ~ 1.0",
+  "celestial_core.tooltip.cursed_essence": "击败%1$s后，使用带有诅咒附魔的武器杀死生物%2$s概率掉落"
 }

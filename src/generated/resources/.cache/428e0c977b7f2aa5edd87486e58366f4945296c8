@@ -1,13 +1,15 @@
-// 1.21.1	2026-08-07T17:36:07.2018172	Registrate Provider for celestial_core [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
+// 1.21.1	2026-08-17T19:09:14.091247	Registrate Provider for celestial_core [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
 99a7f3d69907dceaaaddc26110aab9bac11e9293 assets/celestial_core/blockstates/reinforced_ocean_block.json
 bf54a41af3f10b2efc158f6b2b934fd7f8bc5a7a assets/celestial_core/blockstates/sakura_steel_block.json
 f8145523e76e04d3259ae16718d09990eab9035b assets/celestial_core/blockstates/virtual_gold_block.json
-8e4072f1441f3c7f89f26abf126eaf86c1cf8ded assets/celestial_core/lang/en_ud.json
-5e5d39608569ce59677efb9ca69b4af0dd22d96a assets/celestial_core/lang/en_us.json
+94f1c9317062ee0ef731a41ad874dc331224b515 assets/celestial_core/lang/en_ud.json
+b4f59de9a9787c6e0106023f25873fc6a0aefb28 assets/celestial_core/lang/en_us.json
 4626c19d587390c3f1238a3952d60920a57ca198 assets/celestial_core/models/block/reinforced_ocean_block.json
 3a27bc9717d310fa4e8cb91f16660f0564d3cc4d assets/celestial_core/models/block/sakura_steel_block.json
 e7fb3e48020017b0712255b3526dca7be0a20621 assets/celestial_core/models/block/virtual_gold_block.json
 6338a37a04941a55b1db5117c1be6b8ed786a501 assets/celestial_core/models/item/broken_totem.json
+a1496b88bd13f449e22fbdb5253bf918067ed3a7 assets/celestial_core/models/item/celestial_fragment.json
+c124aee8c9ef5827e190e8162953a1e43f6e27a8 assets/celestial_core/models/item/cursed_essence.json
 7f41b50a97308ba0064274589636f2485c882051 assets/celestial_core/models/item/death_essence.json
 f302631c6007b52c492e3e067143e2e7a016a18b assets/celestial_core/models/item/desert_pyramid_loot_box.json
 6ce6ce8fedc4081566ef04489a46990f53b234c9 assets/celestial_core/models/item/earth_core.json
@@ -30,6 +32,7 @@ f69a2ea990244ed061f9712f84fe878312112c85 assets/celestial_core/models/item/ocean
 37eb2a885ae0b04bf8ec67607060ebacb2a15c91 assets/celestial_core/models/item/ocean_pickaxe.json
 084aa8a78f57ce47368ceb3ee0e14da30c0fbc6b assets/celestial_core/models/item/ocean_shovel.json
 c1f61563d7124196fe7e3cab8d17bec44d81f286 assets/celestial_core/models/item/ocean_sword.json
+713b325b98b898733b8e508f491a97b9de5cf06c assets/celestial_core/models/item/permafrost_crystal.json
 c4e53799952afe0ffe8357831692240604de0447 assets/celestial_core/models/item/pillager_outpost_loot_box.json
 82784870e0144b1beb6c473231555cbcb4a1d835 assets/celestial_core/models/item/pure_nether_star.json
 32bc750c49206d4c94ebbaa60ff62ab7947392b8 assets/celestial_core/models/item/reinforced_ocean_block.json
@@ -114,6 +117,8 @@ fb90b4babed4eb8dd88228f8203852b71d11817b data/celestial_core/damage_type/abyssal
 fb90b4babed4eb8dd88228f8203852b71d11817b data/celestial_core/damage_type/magic.json
 5a91070f8c58f5c48e1690b5155d366114f359a5 data/celestial_core/loot_modifiers/chests/abandoned_mineshaft.json
 212f60ae0f715a8c6c26f3becf8d560d0c7ec25f data/celestial_core/loot_modifiers/chests/end_city_treasure.json
+aee50eaa30863302b63481846a7e725d00973900 data/celestial_core/loot_modifiers/chests/igloo_chest.json
+7f4e532cc3eb89cff95a46af31007b5e8db84ce1 data/celestial_core/loot_modifiers/drops/cursed_essence.json
 55c5c4ec79ac3b8bb3281517426a5d8a7723b02e data/celestial_core/loot_modifiers/drops/death_essence.json
 d2763d3456faf80244228d32a887e8c308ad9be0 data/celestial_core/loot_modifiers/drops/elder_guardian_spike.json
 a6be57e754e36691af7af6ae37616f0b17f10a26 data/celestial_core/loot_modifiers/drops/fire_essence.json
@@ -136,6 +141,7 @@ ca93038ba07b8941e3b5c2826238f0a2c872ba52 data/celestial_core/loot_table/abandone
 9ea842301cdcaad510c9e11aa1606846bd5b3b35 data/celestial_core/loot_table/blocks/sakura_steel_block.json
 b1c8ea0a1f0256859e8d28caca54b53d96fd7238 data/celestial_core/loot_table/blocks/virtual_gold_block.json
 af2affc4b174ead1e89d3654dd93fa9b851b0065 data/celestial_core/loot_table/end_city_treasure.json
+d4250c8a8490b7f552b061e0b7f914805c2edfbf data/celestial_core/loot_table/igloo_chest.json
 8f76d32466ca1bd700050e2c66b3993261bdc003 data/celestial_core/recipe/earth_core.json
 cc0fad405f3f52200489e763094cbc7778b25af7 data/celestial_core/recipe/fluid_transformation/heart_of_the_sea.json
 323539729b86dd7c25ccb5025535579647d5bd12 data/celestial_core/recipe/generated_tools/ocean/craft/ocean_axe.json
@@ -212,5 +218,5 @@ b07689e2a20bedf9fab83cc98ed8d1c0ebe3c458 data/minecraft/tags/item/foot_armor.jso
 317aefe9d191b0ee604dcf65c5e5138570d871f3 data/minecraft/tags/item/shovels.json
 ea6acb35d2a1750cdd6098ebb20f865bd22f08b3 data/minecraft/tags/item/swords.json
 46d1209e4f073699aadff59481d131552609eaf9 data/minecraft/tags/item/trimmable_armor.json
-41ce061b1396a28141c8b28e141ac90d48df425d data/neoforge/loot_modifiers/global_loot_modifiers.json
+acb07e6df44094776dbc9e54d9f8c9c6e06768f2 data/neoforge/loot_modifiers/global_loot_modifiers.json
 ab7f3063669ede23408290bee27b6dd14b50f9a2 data/neoforge/tags/damage_type/is_magic.json
